@@ -1,0 +1,387 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - link "Skip to main content" [ref=e4] [cursor=pointer]:
+        - /url: "#main-content"
+      - link "SympliCare AI Logo SympliCare AI" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "SympliCare AI Logo" [ref=e7]
+        - generic [ref=e8]: SympliCare AI
+      - generic [ref=e9]:
+        - link "Home" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - text: Home
+        - link "About" [ref=e11] [cursor=pointer]:
+          - /url: /about
+          - text: About
+        - link "Careers" [ref=e12] [cursor=pointer]:
+          - /url: /careers
+          - text: Careers
+        - link "Get in Touch" [ref=e13] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e19]:
+          - generic [ref=e20]:
+            - generic [ref=e21]: Now Accepting Early Access Applications
+            - heading "Simplifying Care Home Operations Built for Real-World Use" [level=1] [ref=e25]
+            - paragraph [ref=e26]: We are developing a platform to support care home teams in managing documentation, workflows, and day-to-day operations in a more structured and practical way.
+            - generic [ref=e27]:
+              - link "Join Early Access →" [ref=e28] [cursor=pointer]:
+                - /url: /contact
+              - link "Book a Call" [ref=e29] [cursor=pointer]:
+                - /url: https://calendly.com/symplicare-ai/new-meeting
+                - img [ref=e30]
+                - text: Book a Call
+            - generic [ref=e32]:
+              - generic [ref=e33]:
+                - generic [ref=e34]: 🏥
+                - text: Built for UK Care Homes
+              - generic [ref=e35]:
+                - generic [ref=e36]: 🔒
+                - text: GDPR Compliant
+              - generic [ref=e37]:
+                - generic [ref=e38]: 🤝
+                - text: Designed with Care Teams
+          - generic [ref=e39]:
+            - generic [ref=e40]:
+              - generic [ref=e41]:
+                - img "Care team providing support" [ref=e42]
+                - generic [ref=e44]: Empowering Care Teams
+              - generic [ref=e45]:
+                - img "Healthcare professional with elderly patient" [ref=e46]
+                - generic [ref=e48]: Compassionate Operations
+              - generic [ref=e49]:
+                - img "Digital healthcare dashboard" [ref=e50]
+                - generic [ref=e52]: Smart Documentation
+              - generic [ref=e53]:
+                - img "Care home operations" [ref=e54]
+                - generic [ref=e56]: Simplified Workflows
+              - generic [ref=e57]:
+                - paragraph [ref=e58]: Product Status
+                - paragraph [ref=e59]: Pilot-ready
+                - paragraph [ref=e60]: Early access open
+            - generic [ref=e61]:
+              - button "Slide 1" [ref=e62]
+              - button "Slide 2" [ref=e63]
+              - button "Slide 3" [ref=e64]
+              - button "Slide 4" [ref=e65]
+            - generic [ref=e67]:
+              - generic [ref=e68]: ✓
+              - generic [ref=e69]:
+                - paragraph [ref=e70]: Platform Status
+                - paragraph [ref=e71]: In Development
+        - generic [ref=e74]:
+          - generic [ref=e75]:
+            - paragraph [ref=e76]: UK
+            - paragraph [ref=e77]: Care Home Focus
+          - generic [ref=e78]:
+            - paragraph [ref=e79]: MVP
+            - paragraph [ref=e80]: Built with Industry Input
+          - generic [ref=e81]:
+            - paragraph [ref=e82]: Early
+            - paragraph [ref=e83]: Access Applications Live
+          - generic [ref=e84]:
+            - paragraph [ref=e85]: Fast
+            - paragraph [ref=e86]: Feedback-led Iteration
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - paragraph [ref=e90]: Operational bottlenecks
+          - heading "Real-World Challenges Care Teams Face" [level=2] [ref=e91]
+          - paragraph [ref=e92]: Daily teams work hard, but fragmented workflows create delays, repeated admin, and audit pressure. This section highlights the moments where time and clarity are lost.
+        - generic [ref=e93]:
+          - generic [ref=e94]:
+            - img "Care team in a real working shift" [ref=e95]
+            - generic [ref=e97]:
+              - paragraph [ref=e98]: Average documentation delay
+              - generic [ref=e99]:
+                - generic "3 plus hours delay" [ref=e100]: 0+
+                - generic [ref=e101]: hours
+              - paragraph [ref=e102]: When incidents are logged late, visibility and response quality drop across the shift.
+            - generic [ref=e103]:
+              - paragraph [ref=e104]: Compliance risk
+              - paragraph [ref=e105]: High
+          - generic [ref=e106]:
+            - article [ref=e107]:
+              - generic [ref=e108]:
+                - img [ref=e110]
+                - generic [ref=e112]:
+                  - heading "Delayed Documentation" [level=3] [ref=e113]
+                  - paragraph [ref=e114]: Incidents happen in real time, but records are often completed hours later due to fragmented tooling and shift pressure.
+            - article [ref=e115]:
+              - generic [ref=e116]:
+                - img [ref=e118]
+                - generic [ref=e120]:
+                  - heading "Duplicate Data Entry" [level=3] [ref=e121]
+                  - paragraph [ref=e122]: Teams repeatedly re-enter the same information across disconnected systems, increasing admin effort and error risk.
+            - article [ref=e123]:
+              - generic [ref=e124]:
+                - img [ref=e126]
+                - generic [ref=e128]:
+                  - heading "Inspection Stress" [level=3] [ref=e129]
+                  - paragraph [ref=e130]: Before audits, teams manually gather evidence under pressure, creating avoidable stress and operational disruption.
+        - link "See How It Works" [ref=e132] [cursor=pointer]:
+          - /url: /#how-it-works
+          - text: See How It Works
+          - generic [ref=e133]: →
+      - generic [ref=e135]:
+        - generic [ref=e136]:
+          - heading "A Platform Designed to Support Everyday Care Operations" [level=2] [ref=e137]
+          - paragraph [ref=e138]: Simple, intuitive tools that fit into the real rhythm of care home work — not against it.
+        - generic [ref=e139]:
+          - generic [ref=e140]:
+            - generic [ref=e141]:
+              - img [ref=e143]
+              - heading "Platform Capabilities" [level=3] [ref=e145]
+            - list [ref=e146]:
+              - listitem [ref=e147] [cursor=pointer]:
+                - generic [ref=e149]:
+                  - paragraph [ref=e150]: Structured Documentation
+                  - paragraph [ref=e151]: Clear templates and workflows that teams understand instantly
+              - listitem [ref=e152] [cursor=pointer]:
+                - generic [ref=e154]:
+                  - paragraph [ref=e155]: Simple Workflows
+                  - paragraph [ref=e156]: Processes that fit into daily routines, not against them
+              - listitem [ref=e157] [cursor=pointer]:
+                - generic [ref=e159]:
+                  - paragraph [ref=e160]: Centralised Information
+                  - paragraph [ref=e161]: Eliminate fragmented data — everything in one place
+              - listitem [ref=e162] [cursor=pointer]:
+                - generic [ref=e164]:
+                  - paragraph [ref=e165]: Manager Visibility
+                  - paragraph [ref=e166]: Clear reporting without extra admin work
+            - paragraph [ref=e167]: “Designed to make everyday tasks easier to manage — without adding complexity.”
+          - generic [ref=e168]:
+            - img "Healthcare worker managing patient care" [ref=e170]
+            - img "Care team" [ref=e173]
+            - generic [ref=e174]:
+              - paragraph [ref=e175]: Time Saved
+              - paragraph [ref=e176]: 10×
+              - paragraph [ref=e177]: ↑ Faster workflows
+      - generic [ref=e179]:
+        - generic [ref=e180]:
+          - generic [ref=e181]:
+            - img [ref=e182]
+            - text: Platform in Action
+          - heading "See How SympliCare AI Works" [level=2] [ref=e184]
+          - paragraph [ref=e185]: Watch how care homes are transforming their daily operations with our platform.
+        - generic [ref=e186]:
+          - generic [ref=e187]:
+            - img "SympliCare AI Platform Demo" [ref=e188]
+            - generic [ref=e190]:
+              - img [ref=e192] [cursor=pointer]
+              - generic [ref=e195]:
+                - paragraph [ref=e196]: Full Platform Demo
+                - paragraph [ref=e197]: Coming Soon — Join Early Access
+            - generic [ref=e198]: LIVE SOON
+          - generic [ref=e200]:
+            - generic [ref=e201]:
+              - generic [ref=e202]: 📋
+              - generic [ref=e203]:
+                - heading "Smart Documentation" [level=4] [ref=e204]
+                - paragraph [ref=e205]: Auto-populated care records that save hours of manual entry every shift.
+            - generic [ref=e206]:
+              - generic [ref=e207]: 📊
+              - generic [ref=e208]:
+                - heading "Live Dashboards" [level=4] [ref=e209]
+                - paragraph [ref=e210]: Real-time visibility into care activities, compliance, and team performance.
+            - generic [ref=e211]:
+              - generic [ref=e212]: 🔔
+              - generic [ref=e213]:
+                - heading "Instant Alerts" [level=4] [ref=e214]
+                - paragraph [ref=e215]: Critical notifications delivered immediately — no more missed incidents.
+      - generic [ref=e217]:
+        - generic [ref=e218]:
+          - heading "How It Works" [level=2] [ref=e219]
+          - paragraph [ref=e220]: Four simple steps from chaos to clarity
+        - generic [ref=e221]:
+          - generic [ref=e224]:
+            - generic [ref=e225]: 📝
+            - generic [ref=e226]: "01"
+            - heading "Staff Record Information" [level=3] [ref=e227]
+            - paragraph [ref=e228]: In a structured way that takes just minutes
+          - generic [ref=e231]:
+            - generic [ref=e232]: 🗂️
+            - generic [ref=e233]: "02"
+            - heading "Information Organized" [level=3] [ref=e234]
+            - paragraph [ref=e235]: All data stored in one accessible place
+          - generic [ref=e238]:
+            - generic [ref=e239]: 📊
+            - generic [ref=e240]: "03"
+            - heading "Managers Gain Visibility" [level=3] [ref=e241]
+            - paragraph [ref=e242]: Dashboard and clear operational reporting
+          - generic [ref=e244]:
+            - generic [ref=e245]: ✅
+            - generic [ref=e246]: "04"
+            - heading "Better Preparedness" [level=3] [ref=e247]
+            - paragraph [ref=e248]: Teams ready for regulatory requirements
+      - generic [ref=e251]:
+        - generic [ref=e252]:
+          - generic [ref=e253]: Industry-Led
+          - heading "Built With Real Industry Input" [level=2] [ref=e254]:
+            - text: Built With Real
+            - text: Industry Input
+          - paragraph [ref=e255]: We are working closely with care home professionals, operational leaders, and compliance-focused advisors to ensure the platform reflects real-world needs — not assumptions.
+          - generic [ref=e256]:
+            - generic [ref=e257]:
+              - paragraph [ref=e258]: Deep
+              - paragraph [ref=e259]: Care Team Discovery
+            - generic [ref=e260]:
+              - paragraph [ref=e261]: Ongoing
+              - paragraph [ref=e262]: User-Led Research
+            - generic [ref=e263]:
+              - paragraph [ref=e264]: UK
+              - paragraph [ref=e265]: Care Home Focus
+        - generic [ref=e266]:
+          - generic [ref=e267]:
+            - img "Professional consultation" [ref=e269]
+            - img "Care home team" [ref=e271]
+          - generic [ref=e272]:
+            - img "Healthcare collaboration" [ref=e274]
+            - img "Care operations" [ref=e276]
+      - generic [ref=e278]:
+        - generic [ref=e279]:
+          - heading "Our Approach" [level=2] [ref=e280]
+          - paragraph [ref=e281]: Focused on simplicity, trust and practical use in every care setting
+        - generic [ref=e282]:
+          - generic [ref=e283]:
+            - generic [ref=e285]: 🎯
+            - heading "Easy to Use" [level=3] [ref=e286]
+            - paragraph [ref=e287]: Designed for busy care teams. Minimal training required. Maximum clarity for daily operations.
+            - generic [ref=e288]:
+              - generic [ref=e289]: Simple UI
+              - generic [ref=e290]: Quick Learn
+          - generic [ref=e291]:
+            - generic [ref=e293]: 🔄
+            - heading "Supports Existing Workflows" [level=3] [ref=e294]
+            - paragraph [ref=e295]: Integrates alongside your current processes without disrupting established care routines.
+            - generic [ref=e296]:
+              - generic [ref=e297]: Flexible
+              - generic [ref=e298]: Non-Disruptive
+          - generic [ref=e299]:
+            - generic [ref=e301]: ⚡
+            - heading "Reduces Complexity" [level=3] [ref=e302]
+            - paragraph [ref=e303]: Simplifies care operations without adding unnecessary features or bloated dashboards.
+            - generic [ref=e304]:
+              - generic [ref=e305]: Streamlined
+              - generic [ref=e306]: Focused
+      - generic [ref=e308]:
+        - generic [ref=e309]:
+          - heading "Join Our Team" [level=2] [ref=e310]
+          - paragraph [ref=e311]: Help us build a platform that genuinely improves care home operations across the UK.
+        - generic [ref=e313]:
+          - generic [ref=e314]:
+            - heading "🌟 Why Join Us?" [level=3] [ref=e315]:
+              - generic [ref=e316]: 🌟
+              - text: Why Join Us?
+            - list [ref=e317]:
+              - listitem [ref=e318]:
+                - generic [ref=e319]: 💙
+                - generic [ref=e320]: Work on a product that directly impacts real lives
+              - listitem [ref=e321]:
+                - generic [ref=e322]: 🤝
+                - generic [ref=e323]: Collaborate with industry experts and care professionals
+              - listitem [ref=e324]:
+                - generic [ref=e325]: 🏡
+                - generic [ref=e326]: Flexible, remote-first workplace culture
+              - listitem [ref=e327]:
+                - generic [ref=e328]: 📈
+                - generic [ref=e329]: Continuous learning and professional growth
+          - generic [ref=e330]:
+            - heading "🚀 Open Positions" [level=3] [ref=e331]:
+              - generic [ref=e332]: 🚀
+              - text: Open Positions
+            - list [ref=e333]:
+              - listitem [ref=e334]:
+                - generic [ref=e335]: Full Stack Developer
+                - generic [ref=e336]: Remote
+              - listitem [ref=e337]:
+                - generic [ref=e338]: UX/UI Designer
+                - generic [ref=e339]: Remote
+              - listitem [ref=e340]:
+                - generic [ref=e341]: Operations Lead
+                - generic [ref=e342]: Hybrid
+              - listitem [ref=e343]:
+                - generic [ref=e344]: QA Engineer
+                - generic [ref=e345]: Remote
+            - link "View All Positions →" [ref=e346] [cursor=pointer]:
+              - /url: /careers
+      - generic [ref=e349]:
+        - generic [ref=e350]: Limited Early Access Available
+        - heading "Ready to Transform Your Care Operations?" [level=2] [ref=e354]:
+          - text: Ready to Transform
+          - text: Your Care Operations?
+        - paragraph [ref=e355]: Join care homes already benefiting from SympliCare AI. Get early access and shape the future of care home operations.
+        - generic [ref=e356]:
+          - link "Join Early Access →" [ref=e357] [cursor=pointer]:
+            - /url: /contact
+          - link "Schedule a Demo" [ref=e358] [cursor=pointer]:
+            - /url: /contact
+        - generic [ref=e359]:
+          - generic [ref=e360]:
+            - generic [ref=e361]: 🏥
+            - generic [ref=e362]: 500+ Care Homes
+          - generic [ref=e363]:
+            - generic [ref=e364]: ⭐
+            - generic [ref=e365]: Industry Verified
+          - generic [ref=e366]:
+            - generic [ref=e367]: 🔒
+            - generic [ref=e368]: GDPR Compliant
+          - generic [ref=e369]:
+            - generic [ref=e370]: 🇬🇧
+            - generic [ref=e371]: UK Based Team
+  - contentinfo [ref=e372]:
+    - generic [ref=e373]:
+      - generic [ref=e374]:
+        - generic [ref=e375]:
+          - generic [ref=e376]:
+            - img "SympliCare AI Logo" [ref=e378]
+            - generic [ref=e379]: SympliCare AI
+          - paragraph [ref=e380]: Supporting care teams with practical, structured operations management. Built for UK care homes.
+          - generic [ref=e381]:
+            - generic [ref=e382]: 🏥
+            - generic [ref=e383]: 🔒
+            - generic [ref=e384]: ⭐
+        - generic [ref=e385]:
+          - heading "Navigation" [level=4] [ref=e386]
+          - list [ref=e387]:
+            - listitem [ref=e388]:
+              - link "Home" [ref=e389] [cursor=pointer]:
+                - /url: /
+                - text: Home
+            - listitem [ref=e391]:
+              - link "About" [ref=e392] [cursor=pointer]:
+                - /url: /about
+                - text: About
+            - listitem [ref=e394]:
+              - link "Careers" [ref=e395] [cursor=pointer]:
+                - /url: /careers
+                - text: Careers
+            - listitem [ref=e397]:
+              - link "Contact" [ref=e398] [cursor=pointer]:
+                - /url: /contact
+                - text: Contact
+        - generic [ref=e400]:
+          - heading "Get in Touch" [level=4] [ref=e401]
+          - paragraph [ref=e402]: Interested in early access or learning more?
+          - link "Contact Us →" [ref=e403] [cursor=pointer]:
+            - /url: /contact
+          - generic [ref=e404]:
+            - generic [ref=e405]:
+              - generic [ref=e406]: ●
+              - text: GDPR Compliant Platform
+            - generic [ref=e407]:
+              - generic [ref=e408]: ●
+              - text: UK-Based Development Team
+      - generic [ref=e409]:
+        - paragraph [ref=e410]: "Disclaimer: SympliCare AI is a technology platform intended to support operational workflows. It does not provide clinical advice or replace regulatory responsibilities."
+        - generic [ref=e411]:
+          - paragraph [ref=e412]: © 2026 SympliCare AI. All rights reserved.
+          - generic [ref=e413]:
+            - link "Privacy Policy" [ref=e414] [cursor=pointer]:
+              - /url: /privacy
+            - link "Terms of Service" [ref=e415] [cursor=pointer]:
+              - /url: /terms
+  - button "Open Next.js Dev Tools" [ref=e421] [cursor=pointer]:
+    - img [ref=e422]

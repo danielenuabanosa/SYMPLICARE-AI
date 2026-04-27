@@ -1,0 +1,218 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - link "SympliCare AI Logo SympliCare AI" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "SympliCare AI Logo" [ref=e5]
+        - generic [ref=e7]: SympliCare AI
+      - generic [ref=e8]:
+        - link "Home" [ref=e9] [cursor=pointer]:
+          - /url: /
+        - link "About" [ref=e10] [cursor=pointer]:
+          - /url: /about
+        - link "Careers" [ref=e11] [cursor=pointer]:
+          - /url: /careers
+        - link "Get in Touch" [ref=e12] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=e13]:
+    - generic [ref=e14]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - heading "About SympliCare AI" [level=2] [ref=e18]
+          - paragraph [ref=e19]: Understanding care home operations. Building practical solutions.
+        - generic [ref=e20]:
+          - generic [ref=e21]:
+            - paragraph [ref=e22]: SympliCare AI was founded to address real operational challenges in care homes.
+            - paragraph [ref=e23]: "We've worked with care home teams, operational leaders, and compliance professionals to understand the true pain points of daily operations. What we discovered was clear:"
+            - list [ref=e24]:
+              - listitem [ref=e25]:
+                - generic [ref=e26]: •
+                - generic [ref=e27]: Existing systems often add complexity rather than reduce it
+              - listitem [ref=e28]:
+                - generic [ref=e29]: •
+                - generic [ref=e30]: Teams need structured, practical tools that fit into their workflows
+              - listitem [ref=e31]:
+                - generic [ref=e32]: •
+                - generic [ref=e33]: Focus must be on usability and clarity, not feature bloat
+          - generic [ref=e35]:
+            - generic [ref=e36]:
+              - heading "Our Mission" [level=4] [ref=e37]
+              - paragraph [ref=e38]: "\"To support care teams with simple, reliable, and practical systems that improve operations without adding unnecessary complexity.\""
+            - generic [ref=e39]:
+              - heading "Our Values" [level=4] [ref=e40]
+              - list [ref=e41]:
+                - listitem [ref=e42]:
+                  - generic [ref=e43]: ✓
+                  - generic [ref=e44]:
+                    - strong [ref=e45]: "Practical:"
+                    - text: Solutions that work in real care settings
+                - listitem [ref=e46]:
+                  - generic [ref=e47]: ✓
+                  - generic [ref=e48]:
+                    - strong [ref=e49]: "Clear:"
+                    - text: No jargon. Simple, obvious design.
+                - listitem [ref=e50]:
+                  - generic [ref=e51]: ✓
+                  - generic [ref=e52]:
+                    - strong [ref=e53]: "Trustworthy:"
+                    - text: Honest about capabilities and limitations
+                - listitem [ref=e54]:
+                  - generic [ref=e55]: ✓
+                  - generic [ref=e56]:
+                    - strong [ref=e57]: "Respectful:"
+                    - text: Built with care home professionals, not for them
+      - generic [ref=e60]:
+        - heading "Founder's Note" [level=2] [ref=e61]
+        - generic [ref=e62]:
+          - paragraph [ref=e63]: I started SympliCare after spending time in care homes, watching dedicated teams struggle with fragmented systems that made their jobs harder, not easier.
+          - paragraph [ref=e64]: These professionals are already stretched thin. They don't need more apps, more dashboards, or more complexity. They need systems that understand their world and fit into it.
+          - paragraph [ref=e65]: What struck me most wasn't the technology gaps—it was how much institutional knowledge and context gets lost between shifts, between systems, and between departments.
+          - paragraph [ref=e66]: A fall that occurs at night gets documented hours later. Training gets entered manually into three separate systems. Inspection preparation becomes a week of manual file organization.
+          - paragraph [ref=e67]: None of these problems exist because of laziness or incompetence. They exist because the tools weren't designed by people who understand the actual operational reality of care homes.
+          - paragraph [ref=e68]: SympliCare is being built differently. We're not coming with preconceived solutions. We're listening first. We're learning what actually works in practice. And we're committing to building only what's truly needed.
+          - paragraph [ref=e69]: I believe that care home operations can be simpler, clearer, and more reliable—not through complexity, but through genuine understanding of what your teams face every day.
+          - paragraph [ref=e70]: That's what we're building.
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - heading "Better Outcomes" [level=3] [ref=e75]
+          - paragraph [ref=e76]: "When systems are clear and processes are simple, teams can focus on what matters: quality care."
+        - generic [ref=e77]:
+          - heading "Reduced Burden" [level=3] [ref=e78]
+          - paragraph [ref=e79]: Less time on administrative complexity means more time and energy for the people under their care.
+        - generic [ref=e80]:
+          - heading "Confidence" [level=3] [ref=e81]
+          - paragraph [ref=e82]: Clear systems and organized information mean teams are prepared and confident, always.
+      - generic [ref=e84]:
+        - generic [ref=e85]:
+          - heading "Meet Our Leadership" [level=2] [ref=e86]
+          - paragraph [ref=e87]: The team building care home solutions with real expertise
+        - generic [ref=e88]:
+          - generic [ref=e89]:
+            - img "Sarah Mitchell" [ref=e91]
+            - generic [ref=e93]:
+              - generic [ref=e94]:
+                - heading "Sarah Mitchell" [level=3] [ref=e95]
+                - paragraph [ref=e96]: Founder & CEO
+              - generic [ref=e98]: 15+ Years Experience
+              - paragraph [ref=e99]: Healthcare innovator with 15+ years in digital transformation. Passionate about bridging technology and compassionate care.
+              - generic [ref=e100]:
+                - generic [ref=e101]: Healthcare Tech
+                - generic [ref=e102]: Strategy
+                - generic [ref=e103]: Product Vision
+            - generic:
+              - link "Connect":
+                - /url: https://linkedin.com
+                - img
+                - text: Connect
+          - generic [ref=e104]:
+            - img "Alex Chen" [ref=e106]
+            - generic [ref=e108]:
+              - generic [ref=e109]:
+                - heading "Alex Chen" [level=3] [ref=e110]
+                - paragraph [ref=e111]: Lead Developer
+              - generic [ref=e113]: 10+ Years Experience
+              - paragraph [ref=e114]: Full-stack engineer specializing in scalable healthcare platforms. 10+ years building robust, secure systems.
+              - generic [ref=e115]:
+                - generic [ref=e116]: Full-Stack Dev
+                - generic [ref=e117]: Cloud Architecture
+                - generic [ref=e118]: Security
+            - generic:
+              - link "Connect":
+                - /url: https://linkedin.com
+                - img
+                - text: Connect
+          - generic [ref=e119]:
+            - img "Emma Rodriguez" [ref=e121]
+            - generic [ref=e123]:
+              - generic [ref=e124]:
+                - heading "Emma Rodriguez" [level=3] [ref=e125]
+                - paragraph [ref=e126]: Head of Design & UX
+              - generic [ref=e128]: 10+ Years Experience
+              - paragraph [ref=e129]: Award-winning UX/UI designer with 10+ years crafting intuitive interfaces for healthcare workflows.
+              - generic [ref=e130]:
+                - generic [ref=e131]: UX Strategy
+                - generic [ref=e132]: Accessibility
+                - generic [ref=e133]: User Research
+            - generic:
+              - link "Connect":
+                - /url: https://linkedin.com
+                - img
+                - text: Connect
+          - generic [ref=e134]:
+            - img "James Wilson" [ref=e136]
+            - generic [ref=e138]:
+              - generic [ref=e139]:
+                - heading "James Wilson" [level=3] [ref=e140]
+                - paragraph [ref=e141]: QA & Testing Lead
+              - generic [ref=e143]: 10+ Years Experience
+              - paragraph [ref=e144]: Meticulous quality assurance specialist. 10+ years ensuring mission-critical systems meet the highest standards.
+              - generic [ref=e145]:
+                - generic [ref=e146]: Test Automation
+                - generic [ref=e147]: Quality Strategy
+                - generic [ref=e148]: Performance Testing
+            - generic:
+              - link "Connect":
+                - /url: https://linkedin.com
+                - img
+                - text: Connect
+      - generic [ref=e150]:
+        - heading "Where We Are Now" [level=2] [ref=e152]
+        - generic [ref=e153]:
+          - generic [ref=e154]:
+            - generic [ref=e155]: "1"
+            - generic [ref=e156]:
+              - heading "Actively Learning" [level=4] [ref=e157]
+              - paragraph [ref=e158]: Working with care professionals to understand real-world operations in depth
+          - generic [ref=e159]:
+            - generic [ref=e160]: "2"
+            - generic [ref=e161]:
+              - heading "Building Core MVP" [level=4] [ref=e162]
+              - paragraph [ref=e163]: Creating the foundation that addresses the most pressing operational challenges
+          - generic [ref=e164]:
+            - generic [ref=e165]: "3"
+            - generic [ref=e166]:
+              - heading "Preparing Pilot" [level=4] [ref=e167]
+              - paragraph [ref=e168]: Getting ready to work with early adopter homes to test and refine
+      - generic [ref=e171]:
+        - heading "Interested in Being Part of This?" [level=2] [ref=e172]
+        - paragraph [ref=e173]: We're actively seeking care professionals, operational leaders, and advisors to shape SympliCare alongside us.
+        - link "Get in Touch" [ref=e174] [cursor=pointer]:
+          - /url: /contact
+  - contentinfo [ref=e175]:
+    - generic [ref=e176]:
+      - generic [ref=e177]:
+        - generic [ref=e178]:
+          - generic [ref=e179]:
+            - img "SympliCare AI Logo" [ref=e180]
+            - generic [ref=e181]: SympliCare AI
+          - paragraph [ref=e182]: Supporting care teams with practical, structured operations management.
+        - generic [ref=e183]:
+          - heading "Quick Links" [level=4] [ref=e184]
+          - list [ref=e185]:
+            - listitem [ref=e186]:
+              - link "Home" [ref=e187] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e188]:
+              - link "About" [ref=e189] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e190]:
+              - link "Contact" [ref=e191] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e192]:
+          - heading "Get in Touch" [level=4] [ref=e193]
+          - paragraph [ref=e194]: Interested in early access or learning more?
+          - link "Contact Us" [ref=e195] [cursor=pointer]:
+            - /url: /contact
+      - generic [ref=e196]:
+        - paragraph [ref=e197]:
+          - strong [ref=e198]: "Disclaimer:"
+          - text: SympliCare AI is a technology platform intended to support operational workflows. It does not provide clinical advice or replace regulatory responsibilities.
+        - generic [ref=e199]:
+          - paragraph [ref=e200]: © 2026 SympliCare AI. All rights reserved.
+          - generic [ref=e201]:
+            - link "Privacy Policy" [ref=e202] [cursor=pointer]:
+              - /url: "#"
+            - link "Terms of Service" [ref=e203] [cursor=pointer]:
+              - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=e209] [cursor=pointer]:
+    - img [ref=e210]

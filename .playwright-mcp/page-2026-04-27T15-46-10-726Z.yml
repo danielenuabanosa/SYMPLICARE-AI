@@ -1,0 +1,178 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - link "SympliCare AI Logo SympliCare AI" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "SympliCare AI Logo" [ref=e6]
+        - generic [ref=e7]: SympliCare AI
+      - generic [ref=e8]:
+        - link "Home" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - text: Home
+        - link "About" [ref=e10] [cursor=pointer]:
+          - /url: /about
+          - text: About
+        - link "Careers" [ref=e11] [cursor=pointer]:
+          - /url: /careers
+          - text: Careers
+        - link "Get in Touch" [ref=e12] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=e13]:
+    - generic [ref=e14]:
+      - generic [ref=e16]:
+        - generic [ref=e17]: 🚀 Careers at SympliCare
+        - heading "Join Our Mission" [level=1] [ref=e18]
+        - paragraph [ref=e19]: We’re building a team passionate about simplifying care home operations and supporting the professionals who do this critical work.
+      - generic [ref=e21]:
+        - heading "Why Join SympliCare?" [level=2] [ref=e23]
+        - generic [ref=e24]:
+          - generic [ref=e25]:
+            - img [ref=e27]
+            - heading "Collaborative Culture" [level=3] [ref=e29]
+            - paragraph [ref=e30]: Work with a team that values your input and thrives on solving real problems.
+          - generic [ref=e31]:
+            - img [ref=e33]
+            - heading "Impact & Purpose" [level=3] [ref=e36]
+            - paragraph [ref=e37]: Your work directly impacts care teams and the people they support every day.
+          - generic [ref=e38]:
+            - img [ref=e40]
+            - heading "Flexibility" [level=3] [ref=e42]
+            - paragraph [ref=e43]: We believe in remote work, flexible schedules, and trusting our team.
+          - generic [ref=e44]:
+            - img [ref=e46]
+            - heading "Learning & Growth" [level=3] [ref=e48]
+            - paragraph [ref=e49]: Continuous learning opportunities and support for professional development.
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - heading "Open Opportunities" [level=2] [ref=e53]
+          - paragraph [ref=e54]: We're looking for talented individuals to join our growing team.
+        - generic [ref=e55]:
+          - link "Full Stack Developer Engineering Full-time Build the next generation of care home operations software. Work with React, Next.js, and modern cloud infrastructure. View Details" [ref=e56] [cursor=pointer]:
+            - /url: /careers/full-stack-developer
+            - generic [ref=e57]:
+              - generic [ref=e58]:
+                - generic [ref=e59]:
+                  - heading "Full Stack Developer" [level=3] [ref=e60]
+                  - paragraph [ref=e61]: Engineering
+                - generic [ref=e62]: Full-time
+              - paragraph [ref=e63]: Build the next generation of care home operations software. Work with React, Next.js, and modern cloud infrastructure.
+              - generic [ref=e64]:
+                - text: View Details
+                - img [ref=e65]
+          - link "Product Manager Product Full-time Shape the future of our platform by working directly with care home professionals and industry advisors. View Details" [ref=e67] [cursor=pointer]:
+            - /url: /careers/product-manager
+            - generic [ref=e68]:
+              - generic [ref=e69]:
+                - generic [ref=e70]:
+                  - heading "Product Manager" [level=3] [ref=e71]
+                  - paragraph [ref=e72]: Product
+                - generic [ref=e73]: Full-time
+              - paragraph [ref=e74]: Shape the future of our platform by working directly with care home professionals and industry advisors.
+              - generic [ref=e75]:
+                - text: View Details
+                - img [ref=e76]
+          - link "Care Operations Consultant Operations Full-time Bring your care home expertise to help us design features that truly solve real-world challenges. View Details" [ref=e78] [cursor=pointer]:
+            - /url: /careers/care-operations-consultant
+            - generic [ref=e79]:
+              - generic [ref=e80]:
+                - generic [ref=e81]:
+                  - heading "Care Operations Consultant" [level=3] [ref=e82]
+                  - paragraph [ref=e83]: Operations
+                - generic [ref=e84]: Full-time
+              - paragraph [ref=e85]: Bring your care home expertise to help us design features that truly solve real-world challenges.
+              - generic [ref=e86]:
+                - text: View Details
+                - img [ref=e87]
+          - link "UX/UI Designer Design Full-time Design intuitive interfaces for busy care teams. Create experiences that reduce complexity, not add to it. View Details" [ref=e89] [cursor=pointer]:
+            - /url: /careers/ux-ui-designer
+            - generic [ref=e90]:
+              - generic [ref=e91]:
+                - generic [ref=e92]:
+                  - heading "UX/UI Designer" [level=3] [ref=e93]
+                  - paragraph [ref=e94]: Design
+                - generic [ref=e95]: Full-time
+              - paragraph [ref=e96]: Design intuitive interfaces for busy care teams. Create experiences that reduce complexity, not add to it.
+              - generic [ref=e97]:
+                - text: View Details
+                - img [ref=e98]
+      - generic [ref=e101]:
+        - heading "Our Values" [level=2] [ref=e103]
+        - generic [ref=e104]:
+          - generic [ref=e105]:
+            - heading "→ Simplicity" [level=3] [ref=e106]:
+              - generic [ref=e107]: →
+              - text: Simplicity
+            - paragraph [ref=e108]: We believe complex problems don’t require complex solutions. We advocate for simplicity in everything we do.
+          - generic [ref=e109]:
+            - heading "→ Empathy" [level=3] [ref=e110]:
+              - generic [ref=e111]: →
+              - text: Empathy
+            - paragraph [ref=e112]: We listen to care professionals and understand their challenges. Their success is our success.
+          - generic [ref=e113]:
+            - heading "→ Integrity" [level=3] [ref=e114]:
+              - generic [ref=e115]: →
+              - text: Integrity
+            - paragraph [ref=e116]: We operate with transparency and honesty. We do what we say we’ll do.
+      - generic [ref=e119]:
+        - heading "Ready to Make an Impact?" [level=2] [ref=e120]
+        - paragraph [ref=e121]: Don’t see a role that fits yet? We’re always interested in talented individuals who share our mission. Send us your details and we’ll get back to you about future opportunities.
+        - link "Submit Your Application" [ref=e122] [cursor=pointer]:
+          - /url: /contact#contact-methods
+      - link "Back to Home" [ref=e125] [cursor=pointer]:
+        - /url: /
+        - img [ref=e126]
+        - text: Back to Home
+  - contentinfo [ref=e128]:
+    - generic [ref=e129]:
+      - generic [ref=e130]:
+        - generic [ref=e131]:
+          - generic [ref=e132]:
+            - img "SympliCare AI Logo" [ref=e134]
+            - generic [ref=e135]: SympliCare AI
+          - paragraph [ref=e136]: Supporting care teams with practical, structured operations management. Built for UK care homes.
+          - generic [ref=e137]:
+            - generic [ref=e138]: 🏥
+            - generic [ref=e139]: 🔒
+            - generic [ref=e140]: ⭐
+        - generic [ref=e141]:
+          - heading "Navigation" [level=4] [ref=e142]
+          - list [ref=e143]:
+            - listitem [ref=e144]:
+              - link "Home" [ref=e145] [cursor=pointer]:
+                - /url: /
+                - text: Home
+            - listitem [ref=e147]:
+              - link "About" [ref=e148] [cursor=pointer]:
+                - /url: /about
+                - text: About
+            - listitem [ref=e150]:
+              - link "Careers" [ref=e151] [cursor=pointer]:
+                - /url: /careers
+                - text: Careers
+            - listitem [ref=e153]:
+              - link "Contact" [ref=e154] [cursor=pointer]:
+                - /url: /contact
+                - text: Contact
+        - generic [ref=e156]:
+          - heading "Get in Touch" [level=4] [ref=e157]
+          - paragraph [ref=e158]: Interested in early access or learning more?
+          - link "Contact Us →" [ref=e159] [cursor=pointer]:
+            - /url: /contact
+          - generic [ref=e160]:
+            - generic [ref=e161]:
+              - generic [ref=e162]: ●
+              - text: GDPR Compliant Platform
+            - generic [ref=e163]:
+              - generic [ref=e164]: ●
+              - text: UK-Based Development Team
+      - generic [ref=e165]:
+        - paragraph [ref=e166]: "Disclaimer: SympliCare AI is a technology platform intended to support operational workflows. It does not provide clinical advice or replace regulatory responsibilities."
+        - generic [ref=e167]:
+          - paragraph [ref=e168]: © 2026 SympliCare AI. All rights reserved.
+          - generic [ref=e169]:
+            - link "Privacy Policy" [ref=e170] [cursor=pointer]:
+              - /url: /privacy
+            - link "Terms of Service" [ref=e171] [cursor=pointer]:
+              - /url: /terms
+  - button "Open Next.js Dev Tools" [ref=e177] [cursor=pointer]:
+    - img [ref=e178]

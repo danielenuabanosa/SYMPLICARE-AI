@@ -1,0 +1,186 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - link "SympliCare AI Logo SympliCare AI" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "SympliCare AI Logo" [ref=e6]
+        - generic [ref=e7]: SympliCare AI
+      - generic [ref=e8]:
+        - link "Home" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - text: Home
+        - link "About" [ref=e10] [cursor=pointer]:
+          - /url: /about
+          - text: About
+        - link "Careers" [ref=e11] [cursor=pointer]:
+          - /url: /careers
+          - text: Careers
+        - link "Get in Touch" [ref=e12] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=e13]:
+    - generic [ref=e14]:
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - generic [ref=e20]:
+            - heading "Contact Form" [level=2] [ref=e21]
+            - paragraph [ref=e22]: Share a few details and we’ll connect you with the right member of our team.
+          - generic [ref=e23]:
+            - generic [ref=e24]:
+              - generic [ref=e25]:
+                - generic [ref=e26]: First Name
+                - textbox "First Name" [ref=e27]
+              - generic [ref=e28]:
+                - generic [ref=e29]: Last Name
+                - textbox "Last Name" [ref=e30]
+            - generic [ref=e31]:
+              - generic [ref=e32]:
+                - generic [ref=e33]: Work Email
+                - textbox "Work Email" [ref=e34]
+              - generic [ref=e35]:
+                - generic [ref=e36]: Company
+                - textbox "Company" [ref=e37]
+            - generic [ref=e38]:
+              - generic [ref=e39]:
+                - generic [ref=e40]: Role
+                - textbox "Role" [ref=e41]
+              - generic [ref=e42]:
+                - generic [ref=e43]: I’m Interested In
+                - combobox "I’m Interested In" [ref=e44]:
+                  - option "Select an option" [selected]
+                  - option "Product Demo"
+                  - option "Operational Consultation"
+                  - option "Partnership Opportunity"
+                  - option "General Inquiry"
+            - generic [ref=e45]:
+              - generic [ref=e46]:
+                - generic [ref=e47]: Message
+                - generic [ref=e48]: 0/600
+              - textbox "Message" [ref=e49]:
+                - /placeholder: Tell us about your current workflow, pain points, and target outcomes.
+            - generic [ref=e51] [cursor=pointer]:
+              - checkbox "I agree to be contacted about my inquiry and understand my information will be handled according to your privacy policy." [ref=e52]
+              - generic [ref=e53]: I agree to be contacted about my inquiry and understand my information will be handled according to your privacy policy.
+            - button "Send Message" [ref=e54]
+        - complementary [ref=e55]:
+          - generic [ref=e56]:
+            - img "UK care operations landscape" [ref=e57]
+            - generic [ref=e59]:
+              - paragraph [ref=e60]: Care teams first
+              - paragraph [ref=e61]: Practical support from first contact
+          - generic [ref=e62]:
+            - heading "Ways to Connect" [level=3] [ref=e63]
+            - generic [ref=e64]:
+              - generic [ref=e65]:
+                - paragraph [ref=e66]: Email
+                - paragraph [ref=e67]: Direct contact for inquiries
+                - link "hello@symplicare.ai" [ref=e68] [cursor=pointer]:
+                  - /url: mailto:hello@symplicare.ai
+              - generic [ref=e69]:
+                - paragraph [ref=e70]: LinkedIn
+                - paragraph [ref=e71]: Follow our journey and connect
+                - link "Visit LinkedIn" [ref=e72] [cursor=pointer]:
+                  - /url: https://linkedin.com/company/symplicare
+              - generic [ref=e73]:
+                - paragraph [ref=e74]: Schedule a Call
+                - paragraph [ref=e75]: Book a time to discuss in detail
+                - link "Book a Call" [ref=e76] [cursor=pointer]:
+                  - /url: https://calendly.com/symplicare-ai/new-meeting
+          - generic [ref=e77]:
+            - heading "What happens next?" [level=3] [ref=e78]
+            - list [ref=e79]:
+              - listitem [ref=e80]: 1. We review your goals and operating context.
+              - listitem [ref=e81]: 2. You receive a tailored follow-up from the right specialist.
+              - listitem [ref=e82]: 3. We align on a practical next step.
+      - generic [ref=e85]:
+        - generic [ref=e86]:
+          - heading "Our Location" [level=2] [ref=e87]
+          - paragraph [ref=e88]: Visit us or connect with our team
+        - generic [ref=e89]:
+          - iframe [ref=e91]:
+            
+          - complementary [ref=e92]:
+            - generic [ref=e93]:
+              - heading "Visit Us" [level=3] [ref=e94]
+              - generic [ref=e95]:
+                - generic [ref=e96]:
+                  - paragraph [ref=e97]: Headquarters
+                  - paragraph [ref=e98]: United Kingdom
+                  - paragraph [ref=e99]: Supporting care teams across the UK
+                - generic [ref=e100]:
+                  - paragraph [ref=e101]: Availability
+                  - paragraph [ref=e102]: Monday to Friday
+                  - paragraph [ref=e103]: 9:00 AM - 5:00 PM GMT
+            - generic [ref=e104]:
+              - heading "Quick Links" [level=3] [ref=e105]
+              - generic [ref=e106]:
+                - link "📧 Email hello@symplicare.ai" [ref=e107] [cursor=pointer]:
+                  - /url: mailto:hello@symplicare.ai
+                  - generic [ref=e108]: 📧
+                  - generic [ref=e109]:
+                    - paragraph [ref=e110]: Email
+                    - paragraph [ref=e111]: hello@symplicare.ai
+                - link "🔗 LinkedIn Follow us" [ref=e112] [cursor=pointer]:
+                  - /url: https://linkedin.com/company/symplicare
+                  - generic [ref=e113]: 🔗
+                  - generic [ref=e114]:
+                    - paragraph [ref=e115]: LinkedIn
+                    - paragraph [ref=e116]: Follow us
+      - generic [ref=e119]:
+        - heading "Ready to Explore SympliCare?" [level=2] [ref=e120]
+        - paragraph [ref=e121]: We’re building this with care professionals. Your input shapes our direction.
+        - link "Back to Home" [ref=e122] [cursor=pointer]:
+          - /url: /
+  - contentinfo [ref=e123]:
+    - generic [ref=e124]:
+      - generic [ref=e125]:
+        - generic [ref=e126]:
+          - generic [ref=e127]:
+            - img "SympliCare AI Logo" [ref=e129]
+            - generic [ref=e130]: SympliCare AI
+          - paragraph [ref=e131]: Supporting care teams with practical, structured operations management. Built for UK care homes.
+          - generic [ref=e132]:
+            - generic [ref=e133]: 🏥
+            - generic [ref=e134]: 🔒
+            - generic [ref=e135]: ⭐
+        - generic [ref=e136]:
+          - heading "Navigation" [level=4] [ref=e137]
+          - list [ref=e138]:
+            - listitem [ref=e139]:
+              - link "Home" [ref=e140] [cursor=pointer]:
+                - /url: /
+                - text: Home
+            - listitem [ref=e142]:
+              - link "About" [ref=e143] [cursor=pointer]:
+                - /url: /about
+                - text: About
+            - listitem [ref=e145]:
+              - link "Careers" [ref=e146] [cursor=pointer]:
+                - /url: /careers
+                - text: Careers
+            - listitem [ref=e148]:
+              - link "Contact" [ref=e149] [cursor=pointer]:
+                - /url: /contact
+                - text: Contact
+        - generic [ref=e151]:
+          - heading "Get in Touch" [level=4] [ref=e152]
+          - paragraph [ref=e153]: Interested in early access or learning more?
+          - link "Contact Us →" [ref=e154] [cursor=pointer]:
+            - /url: /contact
+          - generic [ref=e155]:
+            - generic [ref=e156]:
+              - generic [ref=e157]: ●
+              - text: GDPR Compliant Platform
+            - generic [ref=e158]:
+              - generic [ref=e159]: ●
+              - text: UK-Based Development Team
+      - generic [ref=e160]:
+        - paragraph [ref=e161]: "Disclaimer: SympliCare AI is a technology platform intended to support operational workflows. It does not provide clinical advice or replace regulatory responsibilities."
+        - generic [ref=e162]:
+          - paragraph [ref=e163]: © 2026 SympliCare AI. All rights reserved.
+          - generic [ref=e164]:
+            - link "Privacy Policy" [ref=e165] [cursor=pointer]:
+              - /url: /privacy
+            - link "Terms of Service" [ref=e166] [cursor=pointer]:
+              - /url: /terms
+  - button "Open Next.js Dev Tools" [ref=e172] [cursor=pointer]:
+    - img [ref=e173]

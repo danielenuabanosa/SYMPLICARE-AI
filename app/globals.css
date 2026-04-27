@@ -1,0 +1,235 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Brand Colors - Primary */
+    --teal:        #5ba3c4;
+    --teal-dark:   #4a8bad;
+    --teal-light:  #ddf2ff;
+    --teal-xlight: #f0f9fc;
+    
+    /* Brand Colors - Secondary */
+    --pink:        #d16ba0;
+    --pink-dark:   #b14d80;
+    --pink-light:  #fbe6f0;
+    
+    /* Brand Colors - Accent */
+    --indigo:      #5b5bde;
+    --indigo-dark: #3d3d9f;
+    --violet:      #7c3aed;
+    --purple:      #a855f7;
+    --emerald:     #10b981;
+    --amber:       #f59e0b;
+    --rose:        #f43f5e;
+    --sky:         #0ea5e9;
+
+    /* Neutrals - Enhanced */
+    --background:  #ffffff;
+    --surface:     #f9fafb;
+    --surface-alt: #f3f4f6;
+    --foreground:  #0f172a;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-muted:  #64748b;
+    --border:      #e2e8f0;
+    --border-light: #f1f5f9;
+    --border-teal: #c8e7f0;
+
+    /* Shadows - Professional */
+    --shadow-xs:  0 0.5px 2px 0 rgba(0,0,0,0.05);
+    --shadow-sm:  0 1px 3px 0 rgba(0,0,0,0.08), 0 1px 2px -1px rgba(0,0,0,0.04);
+    --shadow-md:  0 4px 6px -1px rgba(0,0,0,0.10), 0 2px 4px -2px rgba(0,0,0,0.04);
+    --shadow-lg:  0 10px 15px -3px rgba(0,0,0,0.10), 0 4px 6px -2px rgba(0,0,0,0.05);
+    --shadow-xl:  0 20px 25px -5px rgba(0,0,0,0.10), 0 8px 10px -6px rgba(0,0,0,0.04);
+    --shadow-2xl: 0 25px 50px -12px rgba(0,0,0,0.15);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: #ffffff;
+    color: #0f172a;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ─── Keyframe Animations ─────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes pulse-ring {
+  0%   { transform: scale(1);    opacity: 0.6; }
+  100% { transform: scale(1.55); opacity: 0; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes gradientShift {
+  0%,100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+@keyframes counterUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Utility Classes ─────────────────────────────────────── */
+.animate-fade-up        { animation: fadeInUp    0.65s ease both; }
+.animate-fade-left      { animation: fadeInLeft  0.65s ease both; }
+.animate-fade-right     { animation: fadeInRight 0.65s ease both; }
+.animate-scale-in       { animation: scaleIn     0.55s ease both; }
+.animate-float          { animation: float       3s ease-in-out infinite; }
+.animate-counter        { animation: counterUp   0.8s ease both; }
+
+.delay-100  { animation-delay: 0.10s; }
+.delay-200  { animation-delay: 0.20s; }
+.delay-300  { animation-delay: 0.30s; }
+.delay-400  { animation-delay: 0.40s; }
+.delay-500  { animation-delay: 0.50s; }
+.delay-600  { animation-delay: 0.60s; }
+.delay-700  { animation-delay: 0.70s; }
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #5ba3c4 0%, #5b5bde 50%, #d16ba0 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Glass card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+/* Gradient border card */
+.grad-border {
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, #5ba3c4, #d16ba0) border-box;
+  border: 2px solid transparent;
+}
+
+/* Section grid bg pattern */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(91,163,196,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(91,163,196,0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Enhanced Animated gradient button */
+.btn-gradient {
+  background: linear-gradient(135deg, #5ba3c4 0%, #5b5bde 50%, #d16ba0 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease infinite;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(91,163,196,0.25);
+}
+.btn-gradient:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(91,163,196,0.35);
+}
+.btn-gradient:active {
+  transform: translateY(-1px);
+}
+
+/* Secondary button style */
+.btn-secondary {
+  background-color: white;
+  border: 1.5px solid #e2e8f0;
+  color: #1e293b;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-secondary:hover {
+  background-color: #f9fafb;
+  border-color: #5ba3c4;
+  color: #5ba3c4;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* Form styling improvements */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  @apply transition-all duration-300;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+  @apply ring-2 ring-offset-2;
+  ring-color: #5ba3c4;
+}
+
+/* Improved focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid #5ba3c4;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Text selection styling */
+::selection {
+  background-color: #5ba3c4;
+  color: white;
+}
+
+/* Pulse ring for CTA */
+.pulse-ring::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  border: 2px solid #77bdda;
+  animation: pulse-ring 1.8s ease-out infinite;
+  pointer-events: none;
+}
+
+/* Stat card accent top bar */
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #77bdda, #ca86bc);
+  border-radius: 8px 8px 0 0;
+}
+
+/* Scroll reveal (used with JS IntersectionObserver) */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
