@@ -1,201 +1,322 @@
+﻿'use client';
+
 import Link from 'next/link';
-import Section from '../components/Section';
+import Image from 'next/image';
+import { useState } from 'react';
+import processIcon from '@/app/assets/icons/process.png';
+import flashIcon from '@/app/assets/icons/flash.png';
+import targetIcon from '@/app/assets/icons/target.png';
+import teamIcon from '@/app/assets/icons/team.png';
+import notificationIcon from '@/app/assets/icons/notification.png';
+import trustIcon from '@/app/assets/icons/trust.png';
+import fileIcon from '@/app/assets/icons/file.png';
+import verifiedIcon from '@/app/assets/icons/verified.png';
+
+const opportunities = [
+  {
+    id: 'full-stack-developer',
+    title: 'Full Stack Developer',
+    department: 'Engineering',
+    type: 'Full-time',
+    location: 'Remote',
+    experience: '3-5 years',
+    description:
+      'Build the next generation of care home operations software. Work with React, Next.js, and modern cloud infrastructure to deliver reliable, scalable features.',
+  },
+  {
+    id: 'product-manager',
+    title: 'Product Manager',
+    department: 'Product',
+    type: 'Full-time',
+    location: 'Remote',
+    experience: '2-4 years',
+    description:
+      'Shape the future of our platform by working directly with care home professionals and industry advisors to define what gets built and why.',
+  },
+  {
+    id: 'care-operations-consultant',
+    title: 'Care Operations Consultant',
+    department: 'Operations',
+    type: 'Full-time',
+    location: 'Remote',
+    experience: '5+ years',
+    description:
+      'Bring your care home expertise to help us design features that truly solve real-world challenges faced by care teams every day.',
+  },
+  {
+    id: 'ux-ui-designer',
+    title: 'UX/UI Designer',
+    department: 'Design',
+    type: 'Full-time',
+    location: 'Remote',
+    experience: '2-4 years',
+    description:
+      'Design intuitive interfaces for busy care teams. Create experiences that reduce complexity and make day-to-day operations feel effortless.',
+  },
+];
+
+const departments = ['All', 'Engineering', 'Product', 'Design', 'Operations'];
+
+const deptConfig: Record<string, { badge: string; dot: string }> = {
+  Engineering: {
+    badge: 'bg-sky-100 text-sky-700 dark:bg-sky-900/40 dark:text-sky-300',
+    dot: 'bg-sky-500',
+  },
+  Product: {
+    badge: 'bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300',
+    dot: 'bg-violet-500',
+  },
+  Design: {
+    badge: 'bg-pink-100 text-pink-700 dark:bg-pink-900/40 dark:text-pink-300',
+    dot: 'bg-pink-500',
+  },
+  Operations: {
+    badge: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300',
+    dot: 'bg-emerald-500',
+  },
+};
 
 export default function Careers() {
-  const opportunities = [
-    {
-      id: 'full-stack-developer',
-      title: 'Full Stack Developer',
-      department: 'Engineering',
-      type: 'Full-time',
-      description: 'Build the next generation of care home operations software. Work with React, Next.js, and modern cloud infrastructure.',
-    },
-    {
-      id: 'product-manager',
-      title: 'Product Manager',
-      department: 'Product',
-      type: 'Full-time',
-      description: 'Shape the future of our platform by working directly with care home professionals and industry advisors.',
-    },
-    {
-      id: 'care-operations-consultant',
-      title: 'Care Operations Consultant',
-      department: 'Operations',
-      type: 'Full-time',
-      description: 'Bring your care home expertise to help us design features that truly solve real-world challenges.',
-    },
-    {
-      id: 'ux-ui-designer',
-      title: 'UX/UI Designer',
-      department: 'Design',
-      type: 'Full-time',
-      description: 'Design intuitive interfaces for busy care teams. Create experiences that reduce complexity, not add to it.',
-    },
-  ];
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const filtered =
+    activeFilter === 'All'
+      ? opportunities
+      : opportunities.filter((o) => o.department === activeFilter);
+
+  const countFor = (dept: string) =>
+    dept === 'All'
+      ? opportunities.length
+      : opportunities.filter((o) => o.department === dept).length;
 
   return (
-    <div className="w-full bg-gradient-to-b from-white via-[#f8fcfe] to-white">
-      <section className="relative min-h-[500px] flex items-center justify-center bg-gradient-to-br from-[#0f172a] via-[#1a1f3a] to-[#0c2340] overflow-hidden">
+    <div className="min-h-screen bg-white dark:bg-slate-900">
+
+      {/* Hero */}
+      <section className="relative bg-gradient-to-br from-slate-900 via-[#1a1f3a] to-[#0c2340] overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-20 pointer-events-none" />
-        <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-[#77bdda]/15 blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[350px] h-[350px] rounded-full bg-[#ca86bc]/15 blur-3xl pointer-events-none" />
-        <div className="relative z-10 text-center max-w-3xl px-6">
-          <div className="inline-flex items-center gap-2 bg-white/15 border border-white/25 rounded-full px-4 py-2 text-sm text-white/90 mb-6 backdrop-blur-sm">
-            🚀 Careers at SympliCare
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#5ba3c4]/15 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#d16ba0]/12 blur-3xl pointer-events-none" />
+        <div className="relative z-10 max-w-4xl mx-auto px-6 py-24 md:py-32">
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm text-white/80 mb-6 backdrop-blur-sm">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            {opportunities.length} open positions
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-            Join Our <span className="gradient-text">Mission</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5">
+            Build something <span className="gradient-text">meaningful</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/80 leading-relaxed">
-            We’re building a team passionate about simplifying care home operations and supporting the professionals who do this critical work.
+          <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-2xl mb-8">
+            We are a small, focused team building software that makes a real difference for UK care homes. If you want your work to matter, you are in the right place.
           </p>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="#open-roles"
+              className="btn-gradient inline-flex items-center gap-2 text-white px-6 py-3 rounded-lg font-semibold text-sm"
+            >
+              See open roles
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 text-white px-6 py-3 rounded-lg font-semibold text-sm transition-colors"
+            >
+              Learn about us
+            </Link>
+          </div>
         </div>
       </section>
 
-      <Section
-        id="why-join"
-        heading="Why Join SympliCare?"
-        className="bg-gradient-to-br from-[#f0f9fc] via-white to-[#f8fcfe] text-center"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          <div className="bg-white rounded-xl p-6 border border-[#c8e7f0] text-center shadow-md hover:shadow-lg transition-shadow">
-            <div className="inline-block bg-gradient-to-br from-[#77bdda] to-[#5a9bb3] text-white rounded-full p-4 mb-4">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
-              </svg>
-            </div>
-            <h3 className="text-base font-semibold text-slate-950 mb-2">Collaborative Culture</h3>
-            <p className="text-slate-600 text-sm">Work with a team that values your input and thrives on solving real problems.</p>
-          </div>
-
-          <div className="bg-white rounded-xl p-6 border border-[#c8e7f0] text-center shadow-md hover:shadow-lg transition-shadow">
-            <div className="inline-block bg-gradient-to-br from-[#ca86bc] to-[#aa60a0] text-white rounded-full p-4 mb-4">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.38V4.804z" />
-                <path d="M11 15.113v-9.31A7.969 7.969 0 0114.5 4c1.255 0 2.443.29 3.5.804v10A7.97 7.97 0 0014.5 14c-1.669 0-3.218.51-4.5 1.38z" />
-              </svg>
-            </div>
-            <h3 className="text-base font-semibold text-slate-950 mb-2">Impact & Purpose</h3>
-            <p className="text-slate-600 text-sm">Your work directly impacts care teams and the people they support every day.</p>
-          </div>
-
-          <div className="bg-white rounded-xl p-6 border border-[#c8e7f0] text-center shadow-md hover:shadow-lg transition-shadow">
-            <div className="inline-block bg-gradient-to-br from-[#77bdda] to-[#5a9bb3] text-white rounded-full p-4 mb-4">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-              </svg>
-            </div>
-            <h3 className="text-base font-semibold text-slate-950 mb-2">Flexibility</h3>
-            <p className="text-slate-600 text-sm">We believe in remote work, flexible schedules, and trusting our team.</p>
-          </div>
-
-          <div className="bg-white rounded-xl p-6 border border-[#c8e7f0] text-center shadow-md hover:shadow-lg transition-shadow">
-            <div className="inline-block bg-gradient-to-br from-[#ca86bc] to-[#aa60a0] text-white rounded-full p-4 mb-4">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M7 9a2 2 0 100-4 2 2 0 000 4zm.464 7.997A6 6 0 0120 13V5a1 1 0 00-1-1H5a1 1 0 00-1 1v8a1 1 0 001 1h.464l-.536.997zM3 1a1 1 0 011 1v5.5a1.5 1.5 0 01-3 0V2a1 1 0 011-1z" />
-              </svg>
-            </div>
-            <h3 className="text-base font-semibold text-slate-950 mb-2">Learning & Growth</h3>
-            <p className="text-slate-600 text-sm">Continuous learning opportunities and support for professional development.</p>
+      {/* Why Join Strip */}
+      <section className="border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50">
+        <div className="max-w-5xl mx-auto px-6 py-12">
+          <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-8 text-center">
+            Why join SympliCare?
+          </p>
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-6">
+            {[
+              { label: 'Fully Remote', icon: processIcon },
+              { label: 'Growth', icon: flashIcon },
+              { label: 'Impact', icon: targetIcon },
+              { label: 'Great Team', icon: teamIcon },
+              { label: '25 Days PTO', icon: notificationIcon },
+              { label: 'Equity', icon: trustIcon },
+            ].map((perk) => (
+              <div key={perk.label} className="flex flex-col items-center text-center gap-2">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#5ba3c4]/15 to-[#d16ba0]/15 dark:from-[#5ba3c4]/25 dark:to-[#d16ba0]/25 flex items-center justify-center overflow-hidden">
+                  <Image src={perk.icon} alt={perk.label} width={24} height={24} className="object-contain" />
+                </div>
+                <span className="text-xs font-semibold text-slate-700 dark:text-slate-200 leading-tight">
+                  {perk.label}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
-      </Section>
+      </section>
 
-      <Section
-        id="opportunities"
-        heading="Open Opportunities"
-        subheading="We're looking for talented individuals to join our growing team."
-        className="bg-gradient-to-br from-white via-[#f8fcfe] to-[#f0f9fc] text-center"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {opportunities.map((opp) => (
-            <Link
-              key={opp.id}
-              href={`/careers/${opp.id}`}
+      {/* Open Roles */}
+      <section id="open-roles" className="max-w-5xl mx-auto px-6 py-16 md:py-20">
+        <div className="mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-1">
+            Open Roles
+          </h2>
+          <p className="text-slate-500 dark:text-slate-400 text-sm">
+            {filtered.length} position{filtered.length !== 1 ? 's' : ''} available
+            {activeFilter !== 'All' ? ` in ${activeFilter}` : ' across all departments'}
+          </p>
+        </div>
+
+        {/* Department filter */}
+        <div className="flex flex-wrap gap-2 mb-8">
+          {departments.map((dept) => (
+            <button
+              key={dept}
+              onClick={() => setActiveFilter(dept)}
+              className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                activeFilter === dept
+                  ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900 shadow-sm'
+                  : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600'
+              }`}
             >
-              <div className="bg-white border border-[#c8e7f0] rounded-xl p-6 hover:shadow-lg hover:border-[#77bdda] transition-all cursor-pointer h-full relative overflow-hidden group">
-                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#77bdda] to-[#ca86bc] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
-                <div className="flex flex-col items-center gap-2 mb-3">
-                  <div>
-                    <h3 className="text-lg font-semibold text-slate-950">{opp.title}</h3>
-                    <p className="text-sm text-slate-600">{opp.department}</p>
-                  </div>
-                  <span className="bg-[#77bdda]/10 text-[#77bdda] px-3 py-1 rounded-full text-xs font-semibold">
-                    {opp.type}
-                  </span>
-                </div>
-                <p className="text-slate-600 text-sm mb-4">{opp.description}</p>
-                <div className="text-[#77bdda] font-medium inline-flex items-center justify-center gap-2 group">
-                  View Details
-                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-            </Link>
+              {dept}
+              <span
+                className={`text-xs font-semibold px-1.5 py-0.5 rounded-full ${
+                  activeFilter === dept
+                    ? 'bg-white/20 dark:bg-slate-900/20 text-white dark:text-slate-900'
+                    : 'bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-400'
+                }`}
+              >
+                {countFor(dept)}
+              </span>
+            </button>
           ))}
         </div>
-      </Section>
 
-      {/* Our Values */}
-      <Section
-        id="values"
-        heading="Our Values"
-        className="bg-[#f0f9fc] text-center"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <div>
-            <h3 className="text-lg font-semibold text-slate-950 mb-3 flex items-center justify-center gap-2">
-              <span className="text-[#77bdda] text-xl">→</span> Simplicity
-            </h3>
-            <p className="text-slate-600">We believe complex problems don’t require complex solutions. We advocate for simplicity in everything we do.</p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-slate-950 mb-3 flex items-center justify-center gap-2">
-              <span className="text-[#ca86bc] text-xl">→</span> Empathy
-            </h3>
-            <p className="text-slate-600">We listen to care professionals and understand their challenges. Their success is our success.</p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-slate-950 mb-3 flex items-center justify-center gap-2">
-              <span className="text-[#77bdda] text-xl">→</span> Integrity
-            </h3>
-            <p className="text-slate-600">We operate with transparency and honesty. We do what we say we’ll do.</p>
+        {/* Job list */}
+        <div className="space-y-3">
+          {filtered.length === 0 ? (
+            <div className="text-center py-16 text-slate-400 dark:text-slate-500">
+              No open roles in this department right now.
+            </div>
+          ) : (
+            filtered.map((job) => {
+              const cfg = deptConfig[job.department];
+              return (
+                <Link key={job.id} href={`/careers/${job.id}`} className="group block">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-4 p-5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl hover:border-[#5ba3c4] dark:hover:border-[#5ba3c4] hover:shadow-md dark:hover:shadow-slate-900/50 transition-all">
+                    <div className={`hidden sm:block w-2 h-2 rounded-full flex-shrink-0 ${cfg.dot}`} />
+                    <div className="flex-1 min-w-0">
+                      <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                        <h3 className="text-base font-semibold text-slate-900 dark:text-white group-hover:text-[#5ba3c4] transition-colors">
+                          {job.title}
+                        </h3>
+                        <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${cfg.badge}`}>
+                          {job.department}
+                        </span>
+                      </div>
+                      <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 dark:text-slate-400 mb-2.5">
+                        <span className="flex items-center gap-1">
+                          <Image src={fileIcon} alt="" width={14} height={14} className="object-contain opacity-60" />
+                          {job.type}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Image src={processIcon} alt="" width={14} height={14} className="object-contain opacity-60" />
+                          {job.location}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Image src={verifiedIcon} alt="" width={14} height={14} className="object-contain opacity-60" />
+                          {job.experience}
+                        </span>
+                      </div>
+                      <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2">
+                        {job.description}
+                      </p>
+                    </div>
+                    <div className="flex-shrink-0">
+                      <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#5ba3c4] group-hover:gap-2.5 transition-all">
+                        View role
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })
+          )}
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="bg-slate-50 dark:bg-slate-800/50 border-y border-slate-200 dark:border-slate-800">
+        <div className="max-w-5xl mx-auto px-6 py-16">
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                label: 'Simplicity',
+                color: 'text-[#5ba3c4]',
+                desc: "Complex problems don't require complex solutions. We advocate for clarity in everything we build.",
+              },
+              {
+                label: 'Empathy',
+                color: 'text-[#d16ba0]',
+                desc: 'We listen to care professionals and understand their challenges. Their success is our success.',
+              },
+              {
+                label: 'Integrity',
+                color: 'text-[#5b5bde]',
+                desc: "We operate with transparency and honesty. We do what we say we'll do, every time.",
+              },
+            ].map((value) => (
+              <div key={value.label} className="flex gap-4">
+                <div className={`text-2xl font-black ${value.color} leading-none mt-0.5 select-none`}>/</div>
+                <div>
+                  <h3 className={`text-base font-bold ${value.color} mb-2`}>{value.label}</h3>
+                  <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{value.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </Section>
+      </section>
 
-      <Section
-        id="apply"
-        className="bg-gradient-to-br from-[#77bdda] via-[#6366f1] to-[#ca86bc] text-white"
-      >
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Make an Impact?
-          </h2>
-          <p className="text-lg text-white/90 mb-8 leading-relaxed">
-            Don’t see a role that fits yet? We’re always interested in talented individuals who share our mission. Send us your details and we’ll get back to you about future opportunities.
-          </p>
-          <Link
-            href="/contact#contact-methods"
-            className="inline-block bg-white text-[#77bdda] px-8 py-3 rounded-lg font-semibold hover:bg-slate-50 transition-colors"
-          >
-            Submit Your Application
-          </Link>
+      {/* CTA */}
+      <section className="max-w-5xl mx-auto px-6 py-16 md:py-20">
+        <div className="bg-gradient-to-br from-slate-900 to-[#1a1f3a] dark:from-slate-800 dark:to-slate-900 rounded-2xl p-10 md:p-14 text-center relative overflow-hidden">
+          <div className="absolute inset-0 grid-bg opacity-10 pointer-events-none" />
+          <div className="relative z-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+              Don't see a role that fits?
+            </h2>
+            <p className="text-white/70 text-base mb-8 max-w-lg mx-auto leading-relaxed">
+              We're always interested in talented people who share our mission. Send us your details and we'll keep you in mind for future opportunities.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/contact#contact-methods"
+                className="btn-gradient inline-flex items-center gap-2 text-white px-8 py-3 rounded-lg font-semibold text-sm"
+              >
+                Get in touch
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+              <Link
+                href="/"
+                className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Back to home
+              </Link>
+            </div>
+          </div>
         </div>
-      </Section>
-
-      <Section className="text-center border-t border-slate-200">
-        <Link
-          href="/"
-          className="text-[#77bdda] font-semibold hover:text-[#5a9bb3] transition-colors inline-flex items-center gap-2"
-        >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-          Back to Home
-        </Link>
-      </Section>
+      </section>
     </div>
   );
 }

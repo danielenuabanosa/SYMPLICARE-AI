@@ -214,9 +214,9 @@ const jobsData: Record<string, JobPosting> = {
 
 function DetailRow({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex items-start justify-between gap-4 py-3 border-b border-slate-200 last:border-b-0">
-      <span className="text-sm font-medium text-slate-500">{label}</span>
-      <span className="text-sm font-semibold text-slate-900 text-right">{value}</span>
+    <div className="flex items-start justify-between gap-4 py-3 border-b border-slate-200 dark:border-slate-700 last:border-b-0">
+      <span className="text-sm font-medium text-slate-500 dark:text-slate-400">{label}</span>
+      <span className="text-sm font-semibold text-slate-900 dark:text-white text-right">{value}</span>
     </div>
   );
 }
@@ -240,13 +240,13 @@ function ListBlock({
   const markerSymbol = marker === 'check' ? '✓' : marker === 'dash' ? '—' : '•';
 
   return (
-    <section className="rounded-2xl border border-slate-200 bg-white p-6 md:p-8">
-      <h2 className="mb-5 text-xl md:text-2xl font-semibold text-slate-950">{title}</h2>
+    <section className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 md:p-8">
+      <h2 className="mb-5 text-xl md:text-2xl font-semibold text-slate-950 dark:text-white">{title}</h2>
       <ul className="space-y-4">
         {items.map((item, idx) => (
           <li key={idx} className="flex items-start gap-3">
             <span className={`mt-0.5 text-sm font-semibold ${markerClass}`}>{markerSymbol}</span>
-            <span className="text-sm md:text-[15px] leading-7 text-slate-700">{item}</span>
+            <span className="text-sm md:text-[15px] leading-7 text-slate-700 dark:text-slate-300">{item}</span>
           </li>
         ))}
       </ul>
@@ -261,12 +261,12 @@ export default function JobDetail() {
 
   if (!job) {
     return (
-      <div className="w-full">
-        <Section className="pt-20 md:pt-24 pb-12 md:pb-16">
+    <div className="w-full">
+      <Section className="pt-20 md:pt-24 pb-12 md:pb-16">
           <div className="mx-auto max-w-2xl text-center">
-            <div className="rounded-2xl border border-slate-200 bg-white p-8 md:p-10">
-              <h1 className="mb-3 text-3xl font-bold text-slate-950">Job Not Found</h1>
-              <p className="mb-8 text-slate-600">
+            <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 md:p-10">
+              <h1 className="mb-3 text-3xl font-bold text-slate-950 dark:text-white">Job Not Found</h1>
+              <p className="mb-8 text-slate-600 dark:text-slate-400">
                 The position you’re looking for doesn’t exist.
               </p>
               <Link
@@ -286,9 +286,9 @@ export default function JobDetail() {
   }
 
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-white dark:bg-slate-900">
       {/* Header */}
-      <section className="border-b border-slate-200 bg-[#f0f9fc]">
+      <section className="border-b border-slate-200 dark:border-slate-700 bg-[#f0f9fc] dark:bg-slate-800">
         <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
           <Link
             href="/careers"
@@ -302,38 +302,38 @@ export default function JobDetail() {
 
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-end">
             <div className="max-w-3xl">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-slate-500">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-slate-500 dark:text-slate-400">
                 {job.department}
               </p>
-              <h1 className="mb-5 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
+              <h1 className="mb-5 text-4xl font-bold tracking-tight text-slate-950 dark:text-white md:text-5xl">
                 {job.title}
               </h1>
-              <p className="max-w-2xl text-base leading-8 text-slate-700 md:text-lg">
+              <p className="max-w-2xl text-base leading-8 text-slate-700 dark:text-slate-300 md:text-lg">
                 {job.overview}
               </p>
             </div>
 
-            <div className="rounded-2xl border border-[#c8e7f0] bg-white p-5 shadow-sm">
+            <div className="rounded-2xl border border-[#c8e7f0] dark:border-slate-700 bg-white dark:bg-slate-800 p-5 shadow-sm">
               <div className="space-y-3">
                 <div className="flex flex-wrap gap-2">
                   <span className="inline-flex rounded-full bg-[#77bdda]/10 px-3 py-1 text-xs font-semibold text-[#5a9bb3]">
                     {job.type}
                   </span>
-                  <span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
+                  <span className="inline-flex rounded-full bg-slate-100 dark:bg-slate-700 px-3 py-1 text-xs font-semibold text-slate-700 dark:text-slate-300">
                     {job.location}
                   </span>
                 </div>
-                <div className="border-t border-slate-200 pt-3">
-                  <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
+                <div className="border-t border-slate-200 dark:border-slate-700 pt-3">
+                  <p className="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
                     Experience
                   </p>
-                  <p className="mt-1 text-sm font-semibold text-slate-900">{job.experience}</p>
+                  <p className="mt-1 text-sm font-semibold text-slate-900 dark:text-white">{job.experience}</p>
                 </div>
                 <div>
-                  <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
+                  <p className="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
                     Posted
                   </p>
-                  <p className="mt-1 text-sm font-semibold text-slate-900">{job.postedDate}</p>
+                  <p className="mt-1 text-sm font-semibold text-slate-900 dark:text-white">{job.postedDate}</p>
                 </div>
               </div>
             </div>
@@ -345,11 +345,11 @@ export default function JobDetail() {
       <Section className="py-10 md:py-12">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-10">
           <div className="space-y-6">
-            <section className="rounded-2xl border border-slate-200 bg-white p-6 md:p-8">
-              <h2 className="mb-4 text-xl md:text-2xl font-semibold text-slate-950">
+            <section className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 md:p-8">
+              <h2 className="mb-4 text-xl md:text-2xl font-semibold text-slate-950 dark:text-white">
                 About This Role
               </h2>
-              <p className="text-sm md:text-[15px] leading-7 text-slate-700">{job.overview}</p>
+              <p className="text-sm md:text-[15px] leading-7 text-slate-700 dark:text-slate-300">{job.overview}</p>
             </section>
 
             <ListBlock title="Responsibilities" items={job.responsibilities} marker="dot" />
@@ -362,8 +362,8 @@ export default function JobDetail() {
           </div>
 
           <aside className="lg:sticky lg:top-24 h-fit space-y-6">
-            <div className="rounded-2xl border border-slate-200 bg-white p-6">
-              <h3 className="mb-4 text-lg font-semibold text-slate-950">Position Details</h3>
+            <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6">
+              <h3 className="mb-4 text-lg font-semibold text-slate-950 dark:text-white">Position Details</h3>
               <div>
                 <DetailRow label="Department" value={job.department} />
                 <DetailRow label="Employment Type" value={job.type} />
@@ -372,34 +372,34 @@ export default function JobDetail() {
                 <DetailRow label="Salary" value={job.salary} />
                 <DetailRow label="Posted" value={job.postedDate} />
               </div>
-              <div className="mt-5 rounded-xl bg-slate-50 p-4">
-                <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
+              <div className="mt-5 rounded-xl bg-slate-50 dark:bg-slate-700 p-4">
+                <p className="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
                   Role Summary
                 </p>
-                <p className="mt-2 text-sm leading-7 text-slate-700">{job.type_details}</p>
+                <p className="mt-2 text-sm leading-7 text-slate-700 dark:text-slate-300">{job.type_details}</p>
               </div>
             </div>
 
-            <div className="rounded-2xl border border-slate-200 bg-[#f0f9fc] p-6">
-              <h3 className="mb-4 text-lg font-semibold text-slate-950">Benefits</h3>
+            <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-[#f0f9fc] dark:bg-slate-800 p-6">
+              <h3 className="mb-4 text-lg font-semibold text-slate-950 dark:text-white">Benefits</h3>
               <ul className="space-y-3">
                 {job.benefits.map((benefit: string, idx: number) => (
                   <li key={idx} className="flex items-start gap-3">
                     <span className="mt-0.5 text-sm font-semibold text-[#77bdda]">✓</span>
-                    <span className="text-sm leading-7 text-slate-700">{benefit}</span>
+                    <span className="text-sm leading-7 text-slate-700 dark:text-slate-300">{benefit}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-slate-200 bg-white p-6">
+            <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6">
               <Link
                 href="/contact#contact-methods"
                 className="block w-full rounded-lg bg-[#77bdda] px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-[#5a9bb3]"
               >
                 Apply Now
               </Link>
-              <p className="mt-3 text-center text-xs leading-5 text-slate-500">
+              <p className="mt-3 text-center text-xs leading-5 text-slate-500 dark:text-slate-400">
                 Ready to join? Complete the application form to get started.
               </p>
             </div>
@@ -410,7 +410,7 @@ export default function JobDetail() {
       {/* Other Positions */}
       <Section
         id="other-positions"
-        className="border-t border-slate-200 bg-[#f8fbfc] py-10 md:py-12"
+        className="border-t border-slate-200 dark:border-slate-700 bg-[#f8fbfc] dark:bg-slate-800 py-10 md:py-12"
         heading="Other Open Positions"
       >
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-5 md:grid-cols-2">
@@ -418,17 +418,17 @@ export default function JobDetail() {
             .filter(([id]) => id !== jobId)
             .map(([id, otherJob]) => (
               <Link key={id} href={`/careers/${id}`} className="group block">
-                <div className="h-full rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:border-[#77bdda] hover:shadow-sm">
+                <div className="h-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-700 p-6 transition-all hover:border-[#77bdda] hover:shadow-sm">
                   <div className="mb-3 flex flex-wrap items-center gap-2">
                     <span className="inline-flex rounded-full bg-[#77bdda]/10 px-3 py-1 text-xs font-semibold text-[#5a9bb3]">
                       {otherJob.type}
                     </span>
-                    <span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">
+                    <span className="inline-flex rounded-full bg-slate-100 dark:bg-slate-600 px-3 py-1 text-xs font-semibold text-slate-600 dark:text-slate-200">
                       {otherJob.location}
                     </span>
                   </div>
-                  <h3 className="mb-1 text-lg font-semibold text-slate-950">{otherJob.title}</h3>
-                  <p className="text-sm text-slate-600">{otherJob.department}</p>
+                  <h3 className="mb-1 text-lg font-semibold text-slate-950 dark:text-white">{otherJob.title}</h3>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">{otherJob.department}</p>
                 </div>
               </Link>
             ))}
@@ -437,9 +437,9 @@ export default function JobDetail() {
 
       {/* Footer CTA */}
       <Section className="py-12 md:py-14 text-center">
-        <div className="mx-auto max-w-3xl rounded-2xl border border-slate-200 bg-white p-8 md:p-10">
-          <h2 className="mb-4 text-3xl font-bold text-slate-950">Have Questions?</h2>
-          <p className="mx-auto mb-6 max-w-2xl text-slate-600 leading-7">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 md:p-10">
+          <h2 className="mb-4 text-3xl font-bold text-slate-950 dark:text-white">Have Questions?</h2>
+          <p className="mx-auto mb-6 max-w-2xl text-slate-600 dark:text-slate-400 leading-7">
             Feel free to reach out to us at hello@symplicare.ai or explore our careers page for
             more information about the team and current openings.
           </p>
