@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "./components/Header";
 import MobileNav from "./components/MobileNav";
 import Footer from "./components/Footer";
-import { ThemeProvider } from "./components/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -89,24 +88,13 @@ export default function RootLayout({
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <head>
-        {/* Anti-flash: apply dark class before first paint */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');var m=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t===null&&m)){document.documentElement.classList.add('dark');}}catch(e){}})();`,
-          }}
-        />
-      </head>
-      <body className="min-h-full flex flex-col bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
-        <ThemeProvider>
-          <Header />
-          <MobileNav />
-          <main id="main-content" className="flex-1 pt-20 md:pt-0">{children}</main>
-          <Footer />
-        </ThemeProvider>
+      <body className="min-h-full flex flex-col bg-white text-slate-900">
+        <Header />
+        <MobileNav />
+        <main id="main-content" className="flex-1 pt-20 md:pt-0">{children}</main>
+        <Footer />
       </body>
     </html>
   );

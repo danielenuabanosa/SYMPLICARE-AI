@@ -3,10 +3,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import xIcon from '@/app/assets/icons/x.png';
-import facebookIcon from '@/app/assets/icons/facebook.png';
-import linkedInIcon from '@/app/assets/icons/linkedIn.png';
-import { style } from 'framer-motion/client';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -51,20 +47,18 @@ export default function Footer() {
                 <span className="font-bold text-white text-base">SympliCare <span className="gradient-text">AI</span></span>
               </div>
               <p className="text-sm text-slate-400 leading-relaxed mb-5">
-                Supporting care home managers, shift leads, and compliance teams with practical, structured operations management. Built for UK care homes.
+                Supporting care teams with practical, structured operations management. Built for UK care homes.
               </p>
               <div className="flex gap-3">
-                {[xIcon, facebookIcon, linkedInIcon].map((icon, idx) => (
-                  <div key={idx} className="w-9 h-9 rounded-lg  flex items-center justify-center border">
-                    <Image src={icon} alt="" width={20} height={20} className="object-contain brightness-0 invert opacity-80" />
-                  </div>
+                {['🏥', '🔒', '⭐'].map((icon, idx) => (
+                  <div key={idx} className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center text-sm border border-white/10">{icon}</div>
                 ))}
               </div>
             </div>
 
             <div>
               <h4 className="font-semibold text-white mb-5 text-sm tracking-wide uppercase">Navigation</h4>
-              <ul className="space-y-3 text-sm " style={{ listStyleType:'none' }}>
+              <ul className="space-y-3 text-sm">
                 {[['/', 'Home'], ['/about', 'About'], ['/careers', 'Careers'], ['/contact', 'Contact']].map(([href, label]) => (
                   <li key={href}>
                     <Link href={href} className="text-slate-400 hover:text-white transition-colors flex items-center gap-2 group">
