@@ -3,14 +3,25 @@ import Section from './components/Section';
 import ChallengesSection from './components/ChallengesSection';
 import Image from 'next/image';
 import Link from 'next/link';
+import fileIcon from '@/app/assets/icons/file.png';
+import folderIcon from '@/app/assets/icons/folder.png';
+import notificationIcon from '@/app/assets/icons/notification.png';
+import verifiedIcon from '@/app/assets/icons/verified.png';
+import targetIcon from '@/app/assets/icons/target.png';
+import processIcon from '@/app/assets/icons/process.png';
+import flashIcon from '@/app/assets/icons/flash.png';
+import joinUsIcon from '@/app/assets/icons/join-us.png';
+import teamIcon from '@/app/assets/icons/team.png';
+import lockIcon from '@/app/assets/icons/lock.png';
+import trustIcon from '@/app/assets/icons/trust.png';
 
 export default function Home() {
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-white dark:bg-slate-900">
       {/* SECTION 1: HERO */}
       <Hero
-        headline="Simplifying Care Home Operations Built for Real-World Use"
-        subtext="We are developing a platform to support care home teams in managing documentation, workflows, and day-to-day operations in a more structured and practical way."
+        headline="CQC called. Is your evidence ready?"
+        subtext="SympliCare AI gives care homes real-time documentation and audit-ready records across the Safe, Well-Led, and Responsive domains — so the next inspection is never a crisis."
         primaryCTA={{
           label: 'Join Early Access',
           href: '/contact',
@@ -28,23 +39,21 @@ export default function Home() {
       <Section
         id="building"
         heading="A Platform Designed to Support Everyday Care Operations"
-        subheading="Simple, intuitive tools that fit into the real rhythm of care home work — not against it."
-        className="bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/20"
+        subheading="Bridging the gap between care delivered and care documented. Designed for care home managers, shift leads, and compliance teams."
+        className="bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/20 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: Feature list */}
-          <div className="bg-white border border-slate-200 rounded-3xl p-8 md:p-10 shadow-lg hover:shadow-xl transition-shadow animate-fade-left">
+          <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-3xl p-8 md:p-10 shadow-lg hover:shadow-xl transition-shadow animate-fade-left">
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#5ba3c4] to-[#5b5bde] rounded-xl flex items-center justify-center shadow-md">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+              <div className="w-12 h-12 flex items-center justify-center">
+                <Image src={verifiedIcon} alt="" width={48} height={48} className="object-contain" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900">Platform Capabilities</h3>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white">Platform Capabilities</h3>
             </div>
             <ul className="space-y-6">
               {[
-                { title: 'Structured Documentation', desc: 'Clear templates and workflows that teams understand instantly', color: 'from-[#5ba3c4] to-[#4a8bad]' },
+                { title: 'Structured Documentation', desc: 'Operational control system for care homes', color: 'from-[#5ba3c4] to-[#4a8bad]' },
                 { title: 'Simple Workflows', desc: 'Processes that fit into daily routines, not against them', color: 'from-[#5b5bde] to-[#3d3d9f]' },
                 { title: 'Centralised Information', desc: 'Eliminate fragmented data — everything in one place', color: 'from-[#d16ba0] to-[#b14d80]' },
                 { title: 'Manager Visibility', desc: 'Clear reporting without extra admin work', color: 'from-[#7c3aed] to-[#6d28d9]' },
@@ -52,13 +61,13 @@ export default function Home() {
                 <li key={i} className="flex gap-4 group cursor-pointer">
                   <div className={`w-2.5 h-2.5 rounded-full flex-shrink-0 group-hover:scale-150 transition-transform mt-2.5 bg-gradient-to-br ${item.color}`} />
                   <div>
-                    <p className="text-slate-900 font-semibold text-base">{item.title}</p>
-                    <p className="text-slate-600 text-sm mt-1 leading-relaxed">{item.desc}</p>
+                    <p className="text-slate-900 dark:text-white font-semibold text-base">{item.title}</p>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm mt-1 leading-relaxed">{item.desc}</p>
                   </div>
                 </li>
               ))}
             </ul>
-            <p className="text-slate-500 italic mt-10 pt-8 border-t border-slate-100 text-base leading-relaxed">
+            <p className="text-slate-500 dark:text-slate-400 italic mt-10 pt-8 border-t border-slate-100 dark:border-slate-700 text-base leading-relaxed">
               &ldquo;Designed to make everyday tasks easier to manage — without adding complexity.&rdquo;
             </p>
           </div>
@@ -87,9 +96,9 @@ export default function Home() {
             </div>
             {/* Floating metric */}
             <div className="absolute -top-6 -left-6 glass-card rounded-2xl p-5 shadow-xl hidden lg:block border border-white/60">
-              <p className="text-xs text-slate-600 font-semibold tracking-wide">Time Saved</p>
-              <p className="text-3xl font-bold text-slate-900 mt-1">10×</p>
-              <p className="text-xs text-[#5ba3c4] font-semibold mt-2">↑ Faster workflows</p>
+              <p className="text-xs text-slate-600 font-semibold tracking-wide">Admin Burden</p>
+              <p className="text-lg font-bold text-slate-900 mt-1 leading-tight">Less time on<br/>documentation</p>
+              <p className="text-xs text-[#5ba3c4] font-semibold mt-2">↑ More time for care</p>
             </div>
           </div>
         </div>
@@ -179,20 +188,20 @@ export default function Home() {
       >
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {[
-            { number: '01', title: 'Staff Record Information', desc: 'In a structured way that takes just minutes', icon: '📝', color: 'from-[#5ba3c4] to-[#4a8bad]' },
-            { number: '02', title: 'Information Organized', desc: 'All data stored in one accessible place', icon: '🗂️', color: 'from-[#5b5bde] to-[#3d3d9f]' },
-            { number: '03', title: 'Managers Gain Visibility', desc: 'Dashboard and clear operational reporting', icon: '📊', color: 'from-[#d16ba0] to-[#b14d80]' },
-            { number: '04', title: 'Better Preparedness', desc: 'Teams ready for regulatory requirements', icon: '✅', color: 'from-[#7c3aed] to-[#6d28d9]' },
+            { number: '01', title: 'CQC‑Ready Logging  ', desc: 'Staff record incidents in under 90 seconds, structured and timestamped for compliance.', icon: fileIcon, color: 'from-[#5ba3c4] to-[#4a8bad]' },
+            { number: '02', title: 'Organized Records', desc: 'All entries stored securely, instantly searchable.', icon: folderIcon, color: 'from-[#5b5bde] to-[#3d3d9f]' },
+            { number: '03', title: 'Real‑Time Oversight  ', desc: 'Managers see live dashboards and trends.', icon: notificationIcon, color: 'from-[#d16ba0] to-[#b14d80]' },
+            { number: '04', title: ' Always Audit‑Ready  ', desc: 'Teams meet compliance without manual prep.', icon: verifiedIcon, color: 'from-[#7c3aed] to-[#6d28d9]' },
           ].map((step, i) => (
             <div key={i} className="relative group animate-scale-in" style={{ animationDelay: `${i * 100}ms` }}>
               {i < 3 && <div className="hidden md:block absolute top-8 -right-3 w-6 h-0.5 bg-gradient-to-r from-slate-300 to-slate-100 z-10" />}
-              <div className="bg-white border border-slate-200 rounded-2xl p-6 text-center h-full hover:shadow-lg hover:-translate-y-2 transition-all duration-300 hover:border-[#5ba3c4]/50">
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${step.color} text-white rounded-2xl text-3xl mb-5 shadow-md group-hover:scale-110 transition-transform`}>
-                  {step.icon}
+              <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 text-center h-full hover:shadow-lg hover:-translate-y-2 transition-all duration-300 hover:border-[#5ba3c4]/50">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-white dark:bg-slate-700 rounded-2xl mb-5 shadow-md group-hover:scale-110 transition-transform overflow-hidden">
+                  <Image src={step.icon} alt={step.title} width={40} height={40} className="object-contain p-1.5" />
                 </div>
-                <div className="text-xs font-bold text-slate-500 mb-2 tracking-widest uppercase">{step.number}</div>
-                <h3 className="text-base font-bold text-slate-900 mb-3">{step.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{step.desc}</p>
+                <div className="text-xs font-bold text-slate-500 dark:text-slate-400 mb-2 tracking-widest uppercase">{step.number}</div>
+                <h3 className="text-base font-bold text-slate-900 dark:text-white mb-3">{step.title}</h3>
+                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{step.desc}</p>
               </div>
             </div>
           ))}
@@ -200,19 +209,19 @@ export default function Home() {
       </Section>
 
       {/* SECTION 5: BUILT WITH INDUSTRY INPUT + IMAGE GALLERY */}
-      <section className="py-24 bg-gradient-to-br from-blue-50/50 via-white to-purple-50/30">
+        <section className="py-24 bg-gradient-to-br from-blue-50/50 via-white to-purple-50/30 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-left">
-              <div className="inline-flex items-center gap-2 bg-[#ddf2ff] text-[#5ba3c4] text-xs font-bold px-4 py-2 rounded-full mb-6 uppercase tracking-wide">
+              <div className="inline-flex items-center gap-2 bg-[#ddf2ff] dark:bg-slate-800 text-[#5ba3c4] text-xs font-bold px-4 py-2 rounded-full mb-6 uppercase tracking-wide">
                 Industry-Led
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
                 Built With Real<br />
                 <span className="gradient-text">Industry Input</span>
               </h2>
-              <p className="text-slate-600 text-lg leading-relaxed mb-10 font-light">
-                We are working closely with care home professionals, operational leader, and compliance-focused advisors to ensure the platform reflects real-world needs — not assumptions
+              <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-10 font-light">
+                We are working closely with care home professionals, operational leaders, and compliance-focused advisors to ensure the platform reflects real-world needs — not assumptions.
               </p>
               {/* Stats row */}
               <div className="grid grid-cols-3 gap-4">
@@ -221,9 +230,9 @@ export default function Home() {
                   { value: 'Ongoing', label: 'User-Led Research', color: 'text-[#5b5bde]' },
                   { value: 'UK', label: 'Care Home Focus', color: 'text-[#d16ba0]' },
                 ].map((s, i) => (
-                  <div key={i} className="relative bg-white border border-slate-200 rounded-2xl p-5 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                  <div key={i} className="relative bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-5 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
                     <p className={`text-3xl font-bold ${s.color} mb-2`}>{s.value}</p>
-                    <p className="text-xs text-slate-600 font-semibold leading-tight">{s.label}</p>
+                    <p className="text-xs text-slate-600 dark:text-slate-400 font-semibold leading-tight">{s.label}</p>
                   </div>
                 ))}
               </div>
@@ -256,7 +265,7 @@ export default function Home() {
       <Section
         id="approach"
         heading="Our Approach"
-        subheading="Focused on simplicity, trust and practical use in every care setting"
+        subheading="SympliCare AI is designed to align with how care is actually delivered — supporting continuous operational awareness and reducing reliance on reactive processes."
         className="text-center"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -264,34 +273,36 @@ export default function Home() {
             {
               gradient: 'from-[#77bdda] to-[#5a9bb3]',
               bg: 'bg-[#f0f9fc]',
-              icon: '🎯',
-              title: 'Easy to Use',
-              desc: 'Designed for busy care teams. Minimal training required. Maximum clarity for daily operations.',
-              tags: ['Simple UI', 'Quick Learn'],
+              icon: targetIcon,
+              title: 'Built for Real Workflows',
+              desc: 'Designed for the reality of a busy shift. Minimal training, maximum clarity — staff can document in seconds without leaving the bedside.',
+              tags: ['Simple', 'Practical'],
             },
             {
               gradient: 'from-[#6366f1] to-[#4338ca]',
               bg: 'bg-[#eef2ff]',
-              icon: '🔄',
-              title: 'Supports Existing Workflows',
-              desc: 'Integrates alongside your current processes without disrupting established care routines.',
-              tags: ['Flexible', 'Non-Disruptive'],
+              icon: processIcon,
+              title: 'Continuous Operational Awareness',
+              desc: 'Managers get live visibility into care activities and compliance gaps — not just a report at handover. Shift from reactive to proactive oversight.',
+              tags: ['Live Visibility', 'Proactive'],
             },
             {
               gradient: 'from-[#ca86bc] to-[#aa60a0]',
               bg: 'bg-[#f5e6f3]',
-              icon: '⚡',
-              title: 'Reduces Complexity',
-              desc: 'Simplifies care operations without adding unnecessary features or bloated dashboards.',
-              tags: ['Streamlined', 'Focused'],
+              icon: flashIcon,
+              title: 'Reduces Reactive Pressure',
+              desc: 'Structured documentation replaces ad-hoc processes, reducing reliance on memory and last-minute preparation before CQC visits.',
+              tags: ['CQC-Ready', 'Structured'],
             },
           ].map((item, i) => (
-            <div key={i} className={`group relative ${item.bg} rounded-2xl p-7 border border-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col items-center`}>
+            <div key={i} className={`group relative ${item.bg} dark:bg-slate-800 rounded-2xl p-7 border border-white dark:border-slate-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col items-center`}>
               {/* Gradient accent line */}
               <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${item.gradient} rounded-t-2xl`} />
-              <div className="text-4xl mb-5">{item.icon}</div>
-              <h3 className="text-base font-bold text-slate-900 mb-3">{item.title}</h3>
-              <p className="text-slate-600 text-sm leading-relaxed mb-5">{item.desc}</p>
+              <div className="mb-5 w-12 h-12 flex items-center justify-center">
+                <Image src={item.icon} alt="" width={48} height={48} className="object-contain w-full h-full" />
+              </div>
+              <h3 className="text-base font-bold text-slate-900 dark:text-white mb-3">{item.title}</h3>
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-5">{item.desc}</p>
               <div className="flex gap-2 flex-wrap justify-center">
                 {item.tags.map((tag, j) => (
                   <span key={j} className={`bg-gradient-to-r ${item.gradient} text-white text-xs px-2.5 py-1 rounded-full font-medium`}>{tag}</span>
@@ -307,32 +318,31 @@ export default function Home() {
         id="careers"
         heading="Join Our Team"
         subheading="Help us build a platform that genuinely improves care home operations across the UK."
-        className="bg-gradient-to-br from-[#f8fafc] to-[#f0f9fc] text-center"
+        className="bg-gradient-to-br from-[#f8fafc] to-[#f0f9fc] dark:from-slate-900 dark:to-slate-800 text-center"
       >
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-white rounded-2xl p-7 border border-slate-200 shadow-sm hover:shadow-lg transition-shadow">
-              <h3 className="text-lg font-bold text-slate-950 mb-4 flex items-center justify-center gap-2">
-                <span className="text-2xl">🌟</span> Why Join Us?
+            <div className="bg-white dark:bg-slate-800 rounded-2xl p-7 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-shadow">
+              <h3 className="text-lg font-bold text-slate-950 dark:text-white mb-4 flex items-center justify-center gap-2">
+                <Image src={joinUsIcon} alt="" width={28} height={28} className="object-contain" /> Why Join Us?
               </h3>
               <ul className="space-y-3">
                 {[
-                  { icon: '💙', text: 'Work on a product that directly impacts real lives' },
-                  { icon: '🤝', text: 'Collaborate with industry experts and care professionals' },
-                  { icon: '🏡', text: 'Flexible, remote-first workplace culture' },
-                  { icon: '📈', text: 'Continuous learning and professional growth' },
+                  { text: 'Work on a product that directly impacts real lives' },
+                  { text: 'Collaborate with industry experts and care professionals' },
+                  { text: 'Flexible, remote-first workplace culture' },
+                  { text: 'Continuous learning and professional growth' },
                 ].map((item, i) => (
                   <li key={i} className="flex items-center justify-center gap-3">
-                    <span className="text-lg">{item.icon}</span>
-                    <span className="text-slate-600 text-sm">{item.text}</span>
+                    <span className="text-slate-600 dark:text-slate-400 text-sm">{item.text}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="bg-white rounded-2xl p-7 border border-slate-200 shadow-sm hover:shadow-lg transition-shadow">
-              <h3 className="text-lg font-bold text-slate-950 mb-4 flex items-center justify-center gap-2">
-                <span className="text-2xl">🚀</span> Open Positions
+            <div className="bg-white dark:bg-slate-800 rounded-2xl p-7 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-shadow">
+              <h3 className="text-lg font-bold text-slate-950 dark:text-white mb-4 flex items-center justify-center gap-2">
+                <Image src={teamIcon} alt="" width={28} height={28} className="object-contain" /> UpComing Positions
               </h3>
               <ul className="space-y-3 mb-6 max-w-sm mx-auto">
                 {[
@@ -342,7 +352,7 @@ export default function Home() {
                   { role: 'QA Engineer', type: 'Remote', color: 'bg-[#f5f3ff] text-[#8b5cf6]' },
                 ].map((item, i) => (
                   <li key={i} className="flex items-center justify-center gap-3 flex-wrap">
-                    <span className="text-slate-700 text-sm font-medium">{item.role}</span>
+                    <span className="text-slate-700 dark:text-slate-300 text-sm font-medium">{item.role}</span>
                     <span className={`text-xs px-2.5 py-1 rounded-full font-semibold ${item.color}`}>{item.type}</span>
                   </li>
                 ))}
@@ -377,7 +387,7 @@ export default function Home() {
             <span className="gradient-text">Your Care Operations?</span>
           </h2>
           <p className="text-lg text-slate-300 mb-10 leading-relaxed">
-            Join care homes already benefiting from SympliCare AI. Get early access and shape the future of care home operations.
+            Apply for early access or book a call to explore how SympliCare AI can support your care home operations.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -392,13 +402,13 @@ export default function Home() {
           {/* Social proof */}
           <div className="mt-12 flex flex-wrap justify-center gap-8">
             {[
-              { icon: '🏥', label: '500+ Care Homes' },
-              { icon: '⭐', label: 'Industry Verified' },
-              { icon: '🔒', label: 'GDPR Compliant' },
-              { icon: '🇬🇧', label: 'UK Based Team' },
+              { icon: teamIcon, label: 'Built with 20+ Care Professionals' },
+              { icon: verifiedIcon, label: 'Industry Verified' },
+              { icon: lockIcon, label: 'GDPR Compliant' },
+              { icon: trustIcon, label: 'UK Based Team' },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-2 text-sm text-white/60">
-                <span>{item.icon}</span>
+                <Image src={item.icon} alt="" width={20} height={20} className="object-contain brightness-0 invert opacity-70" />
                 <span>{item.label}</span>
               </div>
             ))}

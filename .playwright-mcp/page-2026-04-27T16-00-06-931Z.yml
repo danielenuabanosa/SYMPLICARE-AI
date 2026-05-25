@@ -25,8 +25,8 @@
         - generic [ref=e19]:
           - generic [ref=e20]:
             - generic [ref=e21]: Now Accepting Early Access Applications
-            - heading "Simplifying Care Home Operations Built for Real-World Use" [level=1] [ref=e25]
-            - paragraph [ref=e26]: We are developing a platform to support care home teams in managing documentation, workflows, and day-to-day operations in a more structured and practical way.
+            - heading "Stay Inspection-Ready Every Day with Real-Time Care Home Monitoring" [level=1] [ref=e25]
+            - paragraph [ref=e26]: Prevent delays, reduce compliance risk, and keep operations under control in real time.
             - generic [ref=e27]:
               - link "Join Early Access →" [ref=e28] [cursor=pointer]:
                 - /url: /contact
@@ -108,19 +108,18 @@
                 - img [ref=e110]
                 - generic [ref=e112]:
                   - heading "Delayed Documentation" [level=3] [ref=e113]
-                  - paragraph [ref=e114]: Incidents happen in real time, but records are often completed hours later due to fragmented tooling and shift pressure.
+                  - paragraph [ref=e114]: Delayed documentation leads to missed incidents and increased compliance risk.
             - article [ref=e115]:
               - generic [ref=e116]:
                 - img [ref=e118]
                 - generic [ref=e120]:
                   - heading "Duplicate Data Entry" [level=3] [ref=e121]
-                  - paragraph [ref=e122]: Teams repeatedly re-enter the same information across disconnected systems, increasing admin effort and error risk.
-            - article [ref=e123]:
+                  - paragraph [ref=e122]: Fragmented systems force repeated data entry, increasing errors and admin burden.
               - generic [ref=e124]:
                 - img [ref=e126]
                 - generic [ref=e128]:
                   - heading "Inspection Stress" [level=3] [ref=e129]
-                  - paragraph [ref=e130]: Before audits, teams manually gather evidence under pressure, creating avoidable stress and operational disruption.
+                  - paragraph [ref=e130]: Teams scramble before inspections due to lack of continuous visibility.
         - link "See How It Works" [ref=e132] [cursor=pointer]:
           - /url: /#how-it-works
           - text: See How It Works
@@ -138,11 +137,11 @@
               - listitem [ref=e147] [cursor=pointer]:
                 - generic [ref=e149]:
                   - paragraph [ref=e150]: Structured Documentation
-                  - paragraph [ref=e151]: Clear templates and workflows that teams understand instantly
+                  - paragraph [ref=e151]: Operational control system for care homes
               - listitem [ref=e152] [cursor=pointer]:
                 - generic [ref=e154]:
                   - paragraph [ref=e155]: Simple Workflows
-                  - paragraph [ref=e156]: Processes that fit into daily routines, not against them
+                  - paragraph [ref=e156]: Continuous monitoring and compliance support platform
               - listitem [ref=e157] [cursor=pointer]:
                 - generic [ref=e159]:
                   - paragraph [ref=e160]: Centralised Information
@@ -199,23 +198,23 @@
           - generic [ref=e224]:
             - generic [ref=e225]: 📝
             - generic [ref=e226]: "01"
-            - heading "Staff Record Information" [level=3] [ref=e227]
-            - paragraph [ref=e228]: In a structured way that takes just minutes
+            - heading "CQC‑Ready Logging  " [level=3] [ref=e227]
+            - paragraph [ref=e228]: Staff record incidents in under 90 seconds, structured and timestamped for compliance.
           - generic [ref=e231]:
             - generic [ref=e232]: 🗂️
             - generic [ref=e233]: "02"
-            - heading "Information Organized" [level=3] [ref=e234]
-            - paragraph [ref=e235]: All data stored in one accessible place
+            - heading "Organized Records" [level=3] [ref=e234]
+            - paragraph [ref=e235]: All entries stored securely, instantly searchable.
           - generic [ref=e238]:
             - generic [ref=e239]: 📊
             - generic [ref=e240]: "03"
-            - heading "Managers Gain Visibility" [level=3] [ref=e241]
-            - paragraph [ref=e242]: Dashboard and clear operational reporting
+            - heading "Real‑Time Oversight  " [level=3] [ref=e241]
+            - paragraph [ref=e242]: Managers see live dashboards and trends.
           - generic [ref=e244]:
             - generic [ref=e245]: ✅
             - generic [ref=e246]: "04"
-            - heading "Better Preparedness" [level=3] [ref=e247]
-            - paragraph [ref=e248]: Teams ready for regulatory requirements
+            - heading " Always Audit‑Ready  " [level=3] [ref=e247]
+            - paragraph [ref=e248]: Teams meet compliance without manual prep.
       - generic [ref=e251]:
         - generic [ref=e252]:
           - generic [ref=e253]: Industry-Led
