@@ -36,8 +36,8 @@
         - generic [ref=e38]:
           - generic [ref=e39]:
             - generic [ref=e40]: Now Accepting Early Access Applications
-            - heading "Stay Inspection-Ready Every Day with Real-Time Care Home Monitoring" [level=1] [ref=e44]
-            - paragraph [ref=e45]: Prevent delays, reduce compliance risk, and keep operations under control in real time.
+            - heading "Simplifying Care Home Operations Built for Real-World Use" [level=1] [ref=e44]
+            - paragraph [ref=e45]: We are developing a platform to support care home teams in managing documentation, workflows, and day-to-day operations in a more structured and practical way.
             - generic [ref=e46]:
               - link "Join Early Access →" [ref=e47] [cursor=pointer]:
                 - /url: /contact
@@ -138,11 +138,11 @@
               - listitem [ref=e158] [cursor=pointer]:
                 - generic [ref=e160]:
                   - paragraph [ref=e161]: Structured Documentation
-                  - paragraph [ref=e162]: Operational control system for care homes
+                  - paragraph [ref=e162]: Clear templates and workflows that teams understand instantly
               - listitem [ref=e163] [cursor=pointer]:
                 - generic [ref=e165]:
                   - paragraph [ref=e166]: Simple Workflows
-                  - paragraph [ref=e167]: Continuous monitoring and compliance support platform
+                  - paragraph [ref=e167]: Processes that fit into daily routines, not against them
               - listitem [ref=e168] [cursor=pointer]:
                 - generic [ref=e170]:
                   - paragraph [ref=e171]: Centralised Information
@@ -193,23 +193,23 @@
           - generic [ref=e228]:
             - generic [ref=e229]: 📝
             - generic [ref=e230]: "01"
-            - heading "CQC‑Ready Logging  " [level=3] [ref=e231]
-            - paragraph [ref=e232]: Staff record incidents in under 90 seconds, structured and timestamped for compliance.
+            - heading "Staff Record Information" [level=3] [ref=e231]
+            - paragraph [ref=e232]: In a structured way that takes just minutes
           - generic [ref=e234]:
             - generic [ref=e235]: 🗂️
             - generic [ref=e236]: "02"
-            - heading "Organized Records" [level=3] [ref=e237]
-            - paragraph [ref=e238]: All entries stored securely, instantly searchable.
+            - heading "Information Organized" [level=3] [ref=e237]
+            - paragraph [ref=e238]: All data stored in one accessible place
           - generic [ref=e240]:
             - generic [ref=e241]: 📊
             - generic [ref=e242]: "03"
-            - heading "Real‑Time Oversight  " [level=3] [ref=e243]
-            - paragraph [ref=e244]: Managers see live dashboards and trends.
+            - heading "Managers Gain Visibility" [level=3] [ref=e243]
+            - paragraph [ref=e244]: Dashboard and clear operational reporting
           - generic [ref=e246]:
             - generic [ref=e247]: ✅
             - generic [ref=e248]: "04"
-            - heading " Always Audit‑Ready  " [level=3] [ref=e249]
-            - paragraph [ref=e250]: Teams meet compliance without manual prep.
+            - heading "Better Preparedness" [level=3] [ref=e249]
+            - paragraph [ref=e250]: Teams ready for regulatory requirements
       - generic [ref=e253]:
         - generic [ref=e254]:
           - generic [ref=e255]: Industry-Led

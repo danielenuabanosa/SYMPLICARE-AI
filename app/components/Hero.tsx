@@ -18,9 +18,9 @@ const slides = [
 ];
 
 const trustBadges = [
-  { icon: '🏥', text: 'For Managers, Shift Leads & Compliance Teams' },
+  { icon: '🏥', text: 'Built for UK Care Homes' },
   { icon: '🔒', text: 'GDPR Compliant' },
-  { icon: '✅', text: 'CQC Framework Aligned' },
+  { icon: '🤝', text: 'Designed with Care Teams' },
 ];
 
 export default function Hero({ headline, subtext, primaryCTA, secondaryCTA }: HeroProps) {

@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import ThemeToggle from './ThemeToggle';
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -88,11 +87,7 @@ export default function MobileNav() {
         </nav>
 
         {/* CTA Button */}
-        <div className="border-t border-white/10 p-5 space-y-3">
-          <div className="flex items-center justify-between">
-            <span className="text-xs text-slate-400">Switch theme</span>
-            <ThemeToggle />
-          </div>
+        <div className="border-t border-white/10 p-5">
           <Link href="/contact"
             className="block btn-gradient text-white px-4 py-3 rounded-xl text-center font-semibold transition-all w-full text-sm shadow-lg"
             onClick={() => setIsOpen(false)}>
