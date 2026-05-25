@@ -212,7 +212,7 @@ export default function Home() {
                 <span className="gradient-text">Industry Input</span>
               </h2>
               <p className="text-slate-600 text-lg leading-relaxed mb-10 font-light">
-                We are working closely with care home professionals, operational leader, and compliance-focused advisors to ensure the platform reflects real-world needs — not assumptions
+                We are working closely with care home professionals, operational leaders, and compliance-focused advisors to ensure the platform reflects real-world needs — not assumptions.
               </p>
               {/* Stats row */}
               <div className="grid grid-cols-3 gap-4">
